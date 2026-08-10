@@ -108,8 +108,8 @@ hosts:
      にフォールバックする。
 - push 後、**配信に使うコミット SHA** を `git rev-parse HEAD` で取得する。
 - 配信 raw URL は**ブランチ名ではなく SHA** で組み立てる（ブランチ名に依存せず、URL も不変になる）:
-  - `https://raw.githubusercontent.com/mynrminto/weekly_reports/<SHA>/reports/<DATE>/radio.mp3`
-  - `https://raw.githubusercontent.com/mynrminto/weekly_reports/<SHA>/reports/<DATE>/infographic.png`
+  - `https://raw.githubusercontent.com/aokitakahirodr-jp/weekly_reports/<SHA>/reports/<DATE>/radio.mp3`
+  - `https://raw.githubusercontent.com/aokitakahirodr-jp/weekly_reports/<SHA>/reports/<DATE>/infographic.png`
 - どちらのブランチに push したかを、最終メッセージに記す。
 
 ### 7. Notion 掲載（音源を再生できる形で埋め込む）
