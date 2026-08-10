@@ -40,7 +40,7 @@ hosts:
 - 利用コネクタ(MCP): PubMed / Notion（Google Drive は任意のバックアップ）
 - 環境変数 `GEMINI_API_KEY`（未設定なら音声はスキップし、その旨を成果物と通知に明記）
 - Notion 掲載先データベース(data_source_id): **`19254e5c-076c-4a67-ba17-0d3e1799ee7a`**
-  （「週刊・小児悪性疾患（各号）」DB。ハブページ: https://app.notion.com/p/3b85933ed71c801f9c95fef5754affda ）
+  （「週刊・小児悪性疾患（各号）」DB。ハブページ: https://app.notion.com/p/weekly_reports-3b85933ed71c801f9c95fef5754affda ）
 
 ## 手順
 
@@ -113,9 +113,9 @@ hosts:
   - PNG → 返る `file-upload://…` を画像 `![caption](file-upload://…)` に使う。
   - ※ 添付は取得から1時間以内にページへ配置すること。MP3 は無料WSで 5MiB 未満に収める（TTS の qscale で調整可）。
 - 当週ページは **update-or-create**（重複防止）:
-  - まず `notion-search`(data_source_url = `collection://1a961a49-2238-4dcb-87fc-53c23ffcb5d7`) で「<DATE> 号」を検索。
+  - まず `notion-search`(data_source_url = `collection://19254e5c-076c-4a67-ba17-0d3e1799ee7a`) で「<DATE> 号」を検索。
   - 有れば `notion-update-page`（`replace_content` で本文差し替え＋`update_properties`）、無ければ
-    `notion-create-pages`（parent = `data_source_id: 1a961a49-2238-4dcb-87fc-53c23ffcb5d7`）。
+    `notion-create-pages`（parent = `data_source_id: 19254e5c-076c-4a67-ba17-0d3e1799ee7a`）。
   - properties: 週(タイトル=「YYYY-MM-DD 号」)、公開日、トピック数=3、PMIDs、MP3(URL=raw)、インフォグラフィックPNG(URL=raw)。
   - content（Notion-flavored Markdown）: 冒頭 callout（出典・2話者・Take Home の案内）→ `## 🔊 今週の音声` に
     `<audio>` → `## 🖼️ インフォグラフィック` に画像 → `## 今週のトピック（3本）` に各論文（見出し=タイトル、
