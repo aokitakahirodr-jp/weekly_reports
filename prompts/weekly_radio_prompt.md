@@ -14,7 +14,7 @@ Notion 掲載（音源を再生できる形で埋め込み）まで行います�
 
 ```yaml
 # 番組名
-show_name: "週刊・小児腎臓病ラジオ"
+show_name: "週刊・小児悪性疾患ラジオ"
 
 # PubMed 検索クエリ（専門領域を変えるならここ）
 pubmed_query: >-
@@ -27,7 +27,7 @@ topic_count: 3
 # 2話者の設定（name は台本の話者ラベルと完全一致させる。voice は Gemini の音声名）
 hosts:
   - { role: "進行役", name: "ナオ",     voice: "Puck" }   # 聞き手・リスナー代弁
-  - { role: "解説役", name: "マキ先生", voice: "Kore" }   # 小児腎臓病が専門
+  - { role: "解説役", name: "マキ先生", voice: "Kore" }   # 小児血液腫瘍が専門
 ```
 
 > 話者は **最大2名**（Gemini マルチスピーカーの上限）。以降の手順に出てくる
@@ -36,11 +36,11 @@ hosts:
 ---
 
 ## 前提
-- リポジトリ: `mynrminto/weekly_reports`（push 先ブランチは手順6で自動的に決まる）
+- リポジトリ: `aokitakahirodr-jp/weekly_reports`（push 先ブランチは手順6で自動的に決まる）
 - 利用コネクタ(MCP): PubMed / Notion（Google Drive は任意のバックアップ）
 - 環境変数 `GEMINI_API_KEY`（未設定なら音声はスキップし、その旨を成果物と通知に明記）
-- Notion 掲載先データベース(data_source_id): **`1a961a49-2238-4dcb-87fc-53c23ffcb5d7`**
-  （「週刊・小児腎臓病ラジオ（各号）」DB。ハブページ: https://app.notion.com/p/3a84bd470a818169afbcefb2f3b7f11b ）
+- Notion 掲載先データベース(data_source_id): **`19254e5c-076c-4a67-ba17-0d3e1799ee7a`**
+  （「週刊・小児悪性疾患（各号）」DB。ハブページ: https://app.notion.com/p/3a84bd470a818169afbcefb2f3b7f11b ）
 
 ## 手順
 
@@ -63,13 +63,13 @@ hosts:
 - 各候補は `mcp__PubMed__get_article_metadata` でタイトル/著者/誌名/日付/DOI/抄録を取得。
 
 ### 2. 選定（3 本）
-- 臨床的インパクト・新規性・小児腎臓病領域との関連度で **3 本**を選ぶ（深掘り重視。似た主題の重複は避ける）。
+- 臨床的インパクト・新規性・小児悪性疾患領域との関連度で **3 本**を選ぶ（深掘り重視。似た主題の重複は避ける）。
 - 症例報告・純粋な基礎のみ・関連薄のものは優先度を下げる。
 - 選定結果を `reports/<DATE>/articles.json` に保存（各: pmid, title, journal, date, doi, url, one_line,
   および **`take_home`（3点の配列）**）。選外に回した候補は `not_selected_this_week` に理由付きで残す。
 
 ### 3. ラジオ台本 `reports/<DATE>/script.md` と読み上げ用 `script.txt`
-- **2話者の対話形式**。進行役 **ナオ**（聞き手・リスナー代弁）× 解説役 **マキ先生**（小児腎臓病専門）。
+- **2話者の対話形式**。進行役 **ナオ**（聞き手・リスナー代弁）× 解説役 **マキ先生**（小児科専門）。
 - 構成:
   1. オープニング（番組名「週刊・小児腎臓病ラジオ」、今週の日付、2人の自己紹介、今週は3本を深掘りする旨）
   2. 各トピック（1本ずつ）: ナオの問いを挟みつつ、背景→方法/デザイン→結果→臨床的含意まで**詳しく**。
