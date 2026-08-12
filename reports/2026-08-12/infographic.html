@@ -2,273 +2,131 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>週刊・小児悪性疾患ラジオ 2026-08-12号</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>週刊・小児血液腫瘍ラジオ 2026-08-12</title>
 <style>
-  :root {
-    --surface-1:  #1a1a19;
-    --surface-2:  #232322;
-    --page-plane: #0d0d0d;
-    --text-primary:   #ffffff;
-    --text-secondary: #c3c2b7;
-    --text-muted:     #898781;
-    --border:     rgba(255,255,255,0.10);
-    --gridline:   #2c2c2a;
-    --series-1: #3987e5; /* blue   */
-    --series-2: #d95926; /* orange */
-    --series-3: #199e70; /* aqua   */
+  :root{
+    --bg:#0b1220; --panel:#111c31; --panel2:#0f1830;
+    --ink:#e8eef8; --muted:#93a4c0; --line:#22304d;
+    --a1:#38bdf8; --a2:#34d399; --a3:#f59e0b; --a4:#a78bfa; --a5:#f472b6;
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--page-plane);
-    color: var(--text-primary);
-    font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
-  }
-  .page {
-    width: 1160px;
-    margin: 0 auto;
-    padding: 48px 56px 64px;
-    background: var(--surface-1);
-  }
-  .masthead {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 28px;
-    margin-bottom: 32px;
-  }
-  .masthead .kicker {
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    color: var(--series-1);
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-  .masthead h1 {
-    font-size: 34px;
-    margin: 0;
-    font-weight: 800;
-    letter-spacing: 0.01em;
-  }
-  .masthead .issue {
-    font-size: 16px;
-    color: var(--text-secondary);
-    margin-top: 6px;
-  }
-  .hosts {
-    text-align: right;
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.8;
-  }
-  .hosts .host-name { color: var(--text-primary); font-weight: 700; }
-
-  .stat-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 40px;
-  }
-  .stat-tile {
-    background: var(--surface-2);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px 24px;
-  }
-  .stat-tile .label {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-  }
-  .stat-tile .value {
-    font-size: 32px;
-    font-weight: 800;
-    font-variant-numeric: proportional-nums;
-  }
-  .stat-tile .sub {
-    font-size: 12.5px;
-    color: var(--text-secondary);
-    margin-top: 6px;
-    line-height: 1.5;
-  }
-
-  .section-title {
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    color: var(--text-secondary);
-    margin: 0 0 18px;
-    text-transform: uppercase;
-  }
-
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-bottom: 40px;
-  }
-  .card {
-    background: var(--surface-2);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--accent);
-    border-radius: 10px;
-    padding: 22px 26px;
-  }
-  .card:nth-of-type(1) { --accent: var(--series-1); }
-  .card:nth-of-type(2) { --accent: var(--series-2); }
-  .card:nth-of-type(3) { --accent: var(--series-3); }
-
-  .card .topic-no {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 0.06em;
-    margin-bottom: 8px;
-  }
-  .card h3 {
-    font-size: 18.5px;
-    line-height: 1.45;
-    margin: 0 0 10px;
-    font-weight: 700;
-  }
-  .card .meta {
-    font-size: 12.5px;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-  }
-  .card .meta .pmid {
-    color: var(--text-secondary);
-    font-variant-numeric: tabular-nums;
-  }
-  .card .one-line {
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.75;
-    margin-bottom: 14px;
-  }
-  .take-home {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 16px;
-  }
-  .take-home .th-label {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--accent);
-    margin-bottom: 8px;
-    letter-spacing: 0.03em;
-  }
-  .take-home ol {
-    margin: 0;
-    padding-left: 20px;
-    font-size: 13.5px;
-    line-height: 1.7;
-    color: var(--text-primary);
-  }
-  .take-home li + li { margin-top: 6px; }
-
-  .footer {
-    border-top: 1px solid var(--border);
-    padding-top: 20px;
-    font-size: 12.5px;
-    color: var(--text-muted);
-    line-height: 1.8;
-  }
-  .footer strong { color: var(--text-secondary); }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",system-ui,-apple-system,"Segoe UI",sans-serif;
+    width:1160px}
+  .wrap{padding:44px 48px 52px}
+  .kicker{display:flex;align-items:center;gap:12px;color:var(--muted);
+    letter-spacing:.16em;font-size:13px;font-weight:700;text-transform:uppercase}
+  .kicker .dot{width:9px;height:9px;border-radius:50%;background:var(--a1);
+    box-shadow:0 0 0 4px rgba(56,189,248,.18)}
+  h1{margin:12px 0 6px;font-size:40px;line-height:1.15;letter-spacing:.01em}
+  h1 .accent{color:var(--a1)}
+  .sub{color:var(--muted);font-size:15px;margin-bottom:14px}
+  .hosts{display:inline-flex;align-items:center;gap:10px;margin-bottom:26px;
+    font-size:13px;color:#c7d4ea;background:rgba(56,189,248,.08);
+    border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+  .hosts b{color:#fff;font-weight:700}
+  .hosts .sep{color:var(--muted)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:30px}
+  .stat{background:linear-gradient(180deg,var(--panel),var(--panel2));
+    border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .stat .n{font-size:34px;font-weight:800;line-height:1}
+  .stat .l{color:var(--muted);font-size:13px;margin-top:8px}
+  .grid{display:grid;grid-template-columns:1fr;gap:16px}
+  .card{background:linear-gradient(180deg,var(--panel),var(--panel2));
+    border:1px solid var(--line);border-radius:16px;padding:20px 24px;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c)}
+  .card .top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .badge{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+    font-weight:800;font-size:16px;color:#04121f;background:var(--c)}
+  .tag{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--c);
+    border:1px solid var(--c);border-radius:999px;padding:3px 10px;opacity:.95}
+  .type{margin-left:auto;font-size:12px;color:var(--muted)}
+  .card h2{margin:2px 0 8px;font-size:20px;line-height:1.35}
+  .meta{color:var(--muted);font-size:12.5px;margin-bottom:12px}
+  .meta b{color:#c7d4ea;font-weight:700}
+  .desc{font-size:14px;line-height:1.6;color:#d7e0f0;margin-bottom:14px}
+  .th{border-top:1px dashed var(--line);padding-top:12px}
+  .th .thh{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;
+    letter-spacing:.06em;color:var(--c);margin-bottom:8px}
+  .th ol{margin:0;padding-left:20px}
+  .th li{font-size:13px;line-height:1.55;color:#dbe4f2;margin-bottom:4px}
+  .th li::marker{color:var(--c);font-weight:800}
+  .note{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.35);
+    border-radius:12px;padding:12px 16px;margin-bottom:24px;font-size:12.5px;
+    line-height:1.6;color:#e3dbc8}
+  .note b{color:var(--a3)}
+  .foot{display:flex;align-items:center;justify-content:space-between;
+    margin-top:22px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px}
+  .foot .src{color:#c7d4ea;font-weight:700}
 </style>
 </head>
 <body>
-<div class="page">
+<div class="wrap">
+  <div class="kicker"><span class="dot"></span>週刊・小児血液腫瘍ラジオ &nbsp;/&nbsp; PEDIATRIC HEMATOLOGY-ONCOLOGY RADIO</div>
+  <h1>今週の<span class="accent">小児血液腫瘍</span>トピック</h1>
+  <div class="sub">2026年8月12日号 &middot; PubMed 新着（2026-08-05〜08-12 収載）より厳選</div>
+  <div class="hosts">🎙️ 対話形式&nbsp; <b>ナオ</b><span class="sep">（進行）</span><span class="sep">×</span><b>マキ先生</b><span class="sep">（解説）</span></div>
 
-  <div class="masthead">
-    <div>
-      <div class="kicker">WEEKLY PEDIATRIC RADIO</div>
-      <h1>週刊・小児悪性疾患ラジオ</h1>
-      <div class="issue">2026年8月12日号</div>
-    </div>
-    <div class="hosts">
-      進行役 <span class="host-name">ナオ</span>（聞き手・リスナー代弁）<br>
-      解説役 <span class="host-name">マキ先生</span>（小児科専門）
-    </div>
+  <div class="stats">
+    <div class="stat"><div class="n" style="color:var(--a1)">58</div><div class="l">今週の新着候補（悪性疾患系＋移植/血液疾患系、重複含む）</div></div>
+    <div class="stat"><div class="n" style="color:var(--a2)">3</div><div class="l">厳選トピック（各回に Take Home 3点）</div></div>
+    <div class="stat"><div class="n" style="color:var(--a3)">1 コンセンサス</div><div class="l">＋ 1 コホート ＋ 1 薬物動態研究</div></div>
   </div>
 
-  <div class="stat-row">
-    <div class="stat-tile">
-      <div class="label">今週のPubMed新着（対象領域）</div>
-      <div class="value">163件</div>
-      <div class="sub">2026-08-05 〜 2026-08-12（PubMed収載日）</div>
-    </div>
-    <div class="stat-tile">
-      <div class="label">今週の紹介本数</div>
-      <div class="value">3本</div>
-      <div class="sub">深掘り重視で選定・重複主題は回避</div>
-    </div>
-    <div class="stat-tile">
-      <div class="label">Take Home</div>
-      <div class="value">9点</div>
-      <div class="sub">各トピック3点ずつ、マキ先生が口頭でも解説</div>
-    </div>
-  </div>
+  <div class="note"><b>設定切り替えのお知らせ:</b> 番組の対象領域が今号より小児腎臓病から<b>小児血液腫瘍</b>に切り替わりました（設定ファイル更新のPRがマージされたため）。同日付で公開していた旧・腎臓病版の内容を差し替えています。</div>
 
-  <div class="section-title">今週のトピック（3本）</div>
-  <div class="cards">
-
-    <div class="card">
-      <div class="topic-no">TOPIC 1 — EPIDEMIOLOGY / OUTCOMES</div>
-      <h3>重症マラリア後の小児AKI、長期の死亡・慢性腎臓病リスクを前向きに追跡</h3>
-      <div class="meta">The Lancet Global Health &nbsp;·&nbsp; 2026-08-11（収載）&nbsp;·&nbsp; Prospective Observational Study &nbsp;·&nbsp; PMID <span class="pmid">42575118</span> &nbsp;·&nbsp; DOI 10.1016/j.langlo.2026.103984</div>
-      <div class="one-line">ウガンダの小児1,077例を最長8.8年追跡。AKI合併群は補正後も長期死亡・CKDリスクが高く、死亡の半数近くが退院後に発生していた。</div>
-      <div class="take-home">
-        <div class="th-label">今日の Take Home</div>
+  <div class="grid">
+    <div class="card" style="--c:var(--a1)">
+      <div class="top"><div class="badge">1</div><span class="tag">ALL・治療戦略</span><span class="type">国際専門家コンセンサス・総説</span></div>
+      <h2>Blinatumomab時代のアスパラギナーゼ、使い方の国際コンセンサス</h2>
+      <div class="meta"><b>Cancer</b> &middot; 2026-08-15（掲載受理） &middot; PMID 42578884</div>
+      <div class="desc">Blinatumomabを組み込む新しいALL治療体系のなかで、アスパラギナーゼをどう使うべきかについて国際パネルが合意声明。投与量・TDM、過敏反応予防、薬剤の組み合わせ、資源限定環境での工夫を整理。</div>
+      <div class="th">
+        <div class="thh">🎯 TAKE HOME</div>
         <ol>
-          <li>AKI合併児は非合併児に比べ、主要有害腎イベント(CKD/死亡)の補正オッズが約3.1倍（aOR 3.14）。</li>
-          <li>死亡リスク上昇は急性期後も持続し、発症2年以降でも補正ハザード比4.5倍程度と高いまま。</li>
-          <li>CKDへの上乗せは補正後に非有意化 — AKIは「腎機能低下」より「長期的脆弱性のサイン」と提案。</li>
+          <li>Blinatumomab時代でも<b>アスパラギナーゼは要</b>。投与量・TDMの推奨を提示。</li>
+          <li>過敏反応・不活化の予防と、<b>3剤の組み合わせ方</b>にコンセンサス。</li>
+          <li>資源の限られた医療環境での<b>製剤選択・投与法</b>にも言及。</li>
         </ol>
       </div>
     </div>
 
-    <div class="card">
-      <div class="topic-no">TOPIC 2 — SURGERY / META-ANALYSIS</div>
-      <h3>小児の原発性巨大尿管、内視鏡治療7手技を27研究・789例でメタ解析</h3>
-      <div class="meta">Journal of Pediatric Surgery &nbsp;·&nbsp; 2026-08-10（収載）&nbsp;·&nbsp; Systematic Review &amp; Meta-analysis &nbsp;·&nbsp; PMID <span class="pmid">42575261</span> &nbsp;·&nbsp; DOI 10.1016/j.jpedsurg.2026.163368</div>
-      <div class="one-line">PRISMA準拠のレビューで27研究・816腎単位を統合。バルーン拡張やVUJ切開は高成功率だが、「治療成功」の定義が9通りとばらつき大。</div>
-      <div class="take-home">
-        <div class="th-label">今日の Take Home</div>
+    <div class="card" style="--c:var(--a2)">
+      <div class="top"><div class="badge">2</div><span class="tag">治療アクセス・グローバルヘルス</span><span class="type">多施設前向き観察コホート研究</span></div>
+      <h2>アフリカの小児がん、治療中断リスクは43%</h2>
+      <div class="meta"><b>Pediatric Blood &amp; Cancer</b> &middot; 2026-08-11 &middot; PMID 42578510</div>
+      <div class="desc">エチオピア・ウガンダの小児がん(5種)370例を前向き追跡。治療中断リスクは全体43%(施設間20〜54%)。2年無イベント生存率は治療中断込みで28%、中断ゼロ想定なら59%まで改善しうる。</div>
+      <div class="th">
+        <div class="thh">🎯 TAKE HOME</div>
         <ol>
-          <li>報告成功率は26〜100%と幅広く、その主因は「治療成功」の定義が9通り存在すること。</li>
-          <li>統合成功率はバルーン拡張+ステントで0.84〜0.95、VUJ切開+ステントで0.91〜1.00。</li>
-          <li>ステント単独後は再吻合率53.7%と高め。著者は共通アウトカムセットの策定を提言。</li>
+          <li>治療中断リスクは<b>全体43%</b>（施設間20〜54%）と非常に高い。</li>
+          <li>ウィルムス腫瘍48%・網膜芽細胞腫49%で特に多い。EFSは<b>28%→59%</b>の差。</li>
+          <li>現金給付による治療完遂支援の<b>ベースライン</b>データとなる研究。</li>
         </ol>
       </div>
     </div>
 
-    <div class="card">
-      <div class="topic-no">TOPIC 3 — PHARMACOKINETICS / TDM</div>
-      <h3>小児ループス腎炎、遊離型ミコフェノール酸は血液毒性の独立予測因子に</h3>
-      <div class="meta">Lupus Science &amp; Medicine &nbsp;·&nbsp; 2026-08-11（収載）&nbsp;·&nbsp; Prospective Cohort Study &nbsp;·&nbsp; PMID <span class="pmid">42580761</span> &nbsp;·&nbsp; DOI 10.1136/lupus-2026-002091</div>
-      <div class="one-line">MMF治療中の小児ループス腎炎65例で、総/遊離型ミコフェノール酸(t-MPA/f-MPA)曝露と効果・血液毒性の関連を検討。</div>
-      <div class="take-home">
-        <div class="th-label">今日の Take Home</div>
+    <div class="card" style="--c:var(--a3)">
+      <div class="top"><div class="badge">3</div><span class="tag">Ph+ ALL・薬物動態</span><span class="type">薬物動態研究（単施設・20例）</span></div>
+      <h2>ダサチニブは脳に届いていない？ Ph+ ALLでの血液脳関門通過性</h2>
+      <div class="meta"><b>Pediatric Blood &amp; Cancer</b> &middot; 2026-08-11 &middot; PMID 42578491</div>
+      <div class="desc">Ph+ ALL患児20例の血漿・脳脊髄液中ダサチニブ濃度をLC-MS/MSで同時測定。血漿は治療域相当(101.6ng/mL)に達する一方、CSFは0.5ng/mLと極めて低く、比は中央値225:1。</div>
+      <div class="th">
+        <div class="thh">🎯 TAKE HOME</div>
         <ol>
-          <li>12ヶ月無再発生存率78.7%。t-MPA・f-MPAいずれも無再発生存と有意に相関（ROC AUC各0.70）。</li>
-          <li>MMF関連ADRは25.2%、うち血液毒性26.2%。血糖・β2ミクログロブリン・C3も危険因子。</li>
-          <li>f-MPA-AUCは血液毒性を独立予測（特異度86.2%）— 安全性モニタリング指標として期待。</li>
+          <li>血漿/CSF濃度比は中央値<b>225:1</b>。全身は十分でも脳には届きにくい。</li>
+          <li>血液脳関門の通過性が<b>極めて低い</b>ことをLC-MS/MSで実証。</li>
+          <li>CNS再発リスクの高いPh+ ALLでは<b>髄腔内化学療法の併用</b>が引き続き重要な可能性。</li>
         </ol>
       </div>
     </div>
-
   </div>
 
-  <div class="footer">
-    <strong>出典・免責：</strong> 各要旨はPubMed収載情報に基づく紹介であり、医学的な断定を目的とするものではありません。<br>
-    詳細は本文中のPMID／DOIより原著論文をご確認ください。実際の診療方針は主治医にご相談ください。<br>
-    今週の検索クエリは小児腎臓病／腎臓学領域（設定欄 pubmed_query）に基づいています。
+  <div class="foot">
+    <span>出典: <span class="src">According to PubMed</span> — 各論文のDOIは番組概要欄／Notionページ参照</span>
+    <span>aokitakahirodr-jp/weekly_reports</span>
   </div>
-
 </div>
 </body>
 </html>

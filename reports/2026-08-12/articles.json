@@ -1,98 +1,88 @@
 {
   "issue_date": "2026-08-12",
-  "show_name": "週刊・小児悪性疾患ラジオ",
+  "show_name": "週刊・小児血液腫瘍ラジオ",
   "format": {
     "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
     "topics": 3,
     "take_home_per_topic": 3
   },
   "search": {
-    "query": "(pediatric OR paediatric OR children OR childhood) AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)",
+    "query": "(pediatric OR paediatric OR children OR childhood OR adolescent OR \"young adult\") AND (leukemia OR leukaemia OR lymphoma OR neuroblastoma OR \"solid tumor\" OR \"solid tumour\" OR sarcoma OR \"brain tumor\" OR \"brain tumour\" OR \"hematologic malignancy\" OR \"haematologic malignancy\" OR \"bone marrow transplantation\" OR \"stem cell transplantation\" OR \"CAR-T\" OR \"hematology\" OR \"haematology\" OR anemia OR anaemia OR thrombocytopenia OR hemophilia OR haemophilia OR \"sickle cell\" OR thalassemia OR thalassaemia OR \"aplastic anemia\" OR \"aplastic anaemia\" OR neutropenia)",
     "datetype": "edat",
     "date_from": "2026-08-05",
     "date_to": "2026-08-12",
     "sort": "pub_date",
     "max_results": 30,
-    "new_hits_broad": 163,
-    "note": "設定欄(prompts/weekly_radio_prompt.md)は番組名を「週刊・小児悪性疾患ラジオ」に変更済みだが、pubmed_queryは腎臓病/腎臓学領域のまま未更新（先週2026-08-10号でも同じ不整合を記録済み）。この不整合を解消する修正はPR #1（claude/pediatric-hematology-oncology-prompt-nhhrlw ブランチ、血液腫瘍領域への検索クエリ変更）としてmainへのマージ待ちだが未マージのため、今回もmain上の設定欄に literal に従い、従来どおり小児腎臓病領域から選定した。"
+    "note": "設定欄(prompts/weekly_radio_prompt.md)のPubMedクエリは32個のブール演算子を含み、PubMed検索ツールの上限(20個)を超えるためそのままでは実行不可だった。全ての検索語を保持したまま、意味的に(1)悪性疾患系ワード群と(2)造血幹細胞移植/血液疾患系ワード群の2クエリに分割して実行し、結果を統合した。クエリA(悪性疾患群): 新着111件中30件取得。クエリB(移植/血液疾患群): 新着559件中30件取得(ただしPubMedのMeSH展開により'hematology'が'blood'/出血関連語にも展開され、産科・非小児領域のノイズが多く混入した)。両クエリの重複含め計58件のユニーク候補からタイトルスクリーニングを行い、3本を選定。",
+    "config_change_note": "先週2026-08-10号・今週2026-08-12号(旧版)はPR未マージのため小児腎臓病(nephrology)領域のクエリで生成されていたが、PR #1(claude/pediatric-hematology-oncology-prompt-nhhrlwブランチ)がmainにマージされ、設定欄が小児血液腫瘍(pediatric hematology-oncology)領域に更新されたため、本号は新しい設定に従い同日付(2026-08-12)の内容を血液腫瘍領域に差し替えて再生成した。"
   },
   "selected": [
     {
-      "pmid": "42575118",
-      "title": "Long-term mortality and risk of chronic kidney disease in children following severe malaria complicated by acute kidney injury: a prospective observational study.",
-      "journal": "The Lancet. Global Health",
-      "date": "2026-08-11 (edat)",
-      "type": "Prospective Observational Study (pooled cohort)",
-      "doi": "10.1016/j.langlo.2026.103984",
-      "url": "https://doi.org/10.1016/j.langlo.2026.103984",
-      "one_line": "ウガンダの重症マラリア罹患後の小児1,077例を最長8.8年追跡し、急性腎障害(AKI)の既往が長期死亡・慢性腎臓病(CKD)リスクとどう関連するかを検討した前向きコホート研究。AKI群は補正後も死亡リスクが有意に高く、退院後の死亡が全体の半数近くを占めた。",
+      "pmid": "42578884",
+      "title": "Optimizing safety and efficacy of asparaginase and blinatumomab therapy in frontline acute lymphoblastic leukemia regimens in diverse health care settings-international expert consensus.",
+      "journal": "Cancer",
+      "date": "2026-08-15 (in press) / 2026-08-11 (edat)",
+      "type": "Consensus Statement / Review",
+      "doi": "10.1002/cncr.70559",
+      "url": "https://doi.org/10.1002/cncr.70559",
+      "one_line": "国際的な小児・成人血液腫瘍の専門家パネルが、frontline blinatumomab併用時代における急性リンパ性白血病(ALL)治療でのアスパラギナーゼの適正使用について合意声明をまとめた総説。",
       "take_home": [
-        "重症マラリアでAKIを合併した小児は、合併しなかった小児に比べて長期の主要有害腎イベント(CKDまたは死亡)の補正オッズが約3.1倍高かった(aOR 3.14, 95%CI 2.23-4.43)。",
-        "AKI群の死亡リスク上昇は急性期を過ぎても持続し、発症2年以降でも補正ハザード比4.53(95%CI 1.80-11.37)と高いままだった。死亡147例中71例は退院後に発生している。",
-        "AKI生存者はCKDのオッズも上昇していたが(OR 1.77)、多変量補正後は有意差が消失(aOR 1.47, p=0.18)しており、AKIは『腎機能低下』そのものより『長期的な脆弱性のサイン』として捉えるべきというのが著者の解釈。マラリア流行地域での急性期中心の医療体制の限界も示唆される。"
+        "Blinatumomab(二重特異性抗体)を組み込んだ新しいALL治療体系でも、アスパラギナーゼは治療の要であり続けるとして、至適投与量と治療薬物モニタリング(TDM)についてパネルの推奨がまとめられた。",
+        "アスパラギナーゼ過敏反応・薬物不活化の予防策、そしてblinatumomab・アスパラギナーゼ・代謝拮抗薬をどのような順序・組み合わせで統合するかについて、専門家間のコンセンサスが提示された。",
+        "資源の限られた医療環境における製剤選択や投与スケジュールの工夫にも言及があり、高所得国だけでなく多様な医療体制での実装可能性を意識した内容になっている。"
       ]
     },
     {
-      "pmid": "42575261",
-      "title": "Endoscopic techniques in the treatment of vesicoureteral junction obstruction in children with primary obstructive megaureter: a systematic review and meta-analysis.",
-      "journal": "Journal of Pediatric Surgery",
-      "date": "2026-08-10 (edat)",
-      "type": "Systematic Review and Meta-analysis (PRISMA準拠, PROSPERO登録)",
-      "doi": "10.1016/j.jpedsurg.2026.163368",
-      "url": "https://doi.org/10.1016/j.jpedsurg.2026.163368",
-      "one_line": "小児の原発性閉塞性巨大尿管(POM)に対する内視鏡的治療について、27研究・小児789例・816腎単位を統合したシステマティックレビュー/メタ解析。バルーン拡張+ステント留置やVUJ切開+ステント留置は高い治療成功率を示す一方、成功の定義自体が研究間で大きくばらついていた。",
+      "pmid": "42578510",
+      "title": "Baseline Risk of Treatment Abandonment and Survival of Children With Common and Curable Cancers in the Zero Abandonment Cash Transfer Programme-A Multi-Centre Prospective CANCaRe Africa Study.",
+      "journal": "Pediatric Blood & Cancer",
+      "date": "2026-08-11 (edat)",
+      "type": "Multi-Centre Prospective Observational Cohort Study",
+      "doi": "10.1002/1545-5017.70621",
+      "url": "https://doi.org/10.1002/1545-5017.70621",
+      "one_line": "WHOのGlobal Initiative for Childhood Cancer(GICC)が定める『6大治癒可能小児がん』のうち5種について、エチオピア・ウガンダの小児370例を前向きに追跡し、治療中断(Treatment Abandonment)のリスクと生存への影響を検討した、今後の現金給付介入の土台となるベースライン研究。",
       "take_home": [
-        "内視鏡治療の報告された治療成功率は26%〜100%と研究間で幅が大きく、その一因は『治療成功』の定義が9通りも存在するという評価指標の不統一にあった。",
-        "メタ解析では、バルーン拡張+ステント留置の統合治療成功率が0.84〜0.95、VUJ切開+ステント留置が0.91〜1.00(いずれも定義により変動)と、いずれも比較的良好な成績だった。",
-        "ステント留置単独後は追加の尿管新吻合術を要する割合が53.7%と高く、尿管の形態を変える手技(拡張・切開など)を併用した群(2.1〜20%)より再介入が多い傾向。著者は今後、共通アウトカムセット(core outcome set)の策定を提言している。"
+        "急性リンパ性白血病・バーキットリンパ腫・ウィルムス腫瘍・網膜芽細胞腫・ホジキン病の小児370例(2022年1月〜2024年4月登録)を追跡したところ、治療を最後まで完遂できない『治療中断』のリスクは全体で43%と非常に高く、施設間で20%(ウガンダ・ムババラ)〜54%(エチオピア・ゴンダール)とばらつきがあった。",
+        "治療中断が特に多かったのはウィルムス腫瘍(48%)と網膜芽細胞腫(49%)。2年無イベント生存率は、治療中断を『イベント』に含めると28%にとどまるが、治療中断が全く起きなかったと仮定すると59%まで改善しうると推計された。",
+        "この結果は、今後実施予定の現金給付(cash transfer)による治療完遂支援プログラムの効果を測る基準値となるもので、治療アクセス・完遂支援そのものが生存率向上に直結しうることを定量的に示している。"
       ]
     },
     {
-      "pmid": "42580761",
-      "title": "Free mycophenolic acid exposure for therapeutic drug monitoring in paediatric lupus nephritis: associations with treatment response and haematologic toxicity.",
-      "journal": "Lupus Science & Medicine",
+      "pmid": "42578491",
+      "title": "Low Dasatinib Penetration of the Blood-Brain Barrier in Children With Philadelphia Chromosome-Positive Acute Lymphoblastic Leukemia: Evidence From LC-MS/MS Analysis.",
+      "journal": "Pediatric Blood & Cancer",
       "date": "2026-08-11 (edat)",
-      "type": "Prospective Cohort Study (薬物動態/TDM)",
-      "doi": "10.1136/lupus-2026-002091",
-      "url": "https://doi.org/10.1136/lupus-2026-002091",
-      "one_line": "ミコフェノール酸モフェチル(MMF)治療中の小児ループス腎炎65例を前向きに登録し、遊離型ミコフェノール酸(f-MPA)と総ミコフェノール酸(t-MPA)の曝露量が治療反応・血液毒性とどう関連するかを検討。f-MPA-AUCは血液毒性の独立予測因子として、より有用な可能性が示された。",
+      "type": "Pharmacokinetic Study (single-center, n=20)",
+      "doi": "10.1002/1545-5017.70588",
+      "url": "https://doi.org/10.1002/1545-5017.70588",
+      "one_line": "フィラデルフィア染色体陽性の小児急性リンパ性白血病(Ph+ ALL)患者20例で、血漿と脳脊髄液(CSF)中のダサチニブ濃度をLC-MS/MS法で同時測定し、中枢神経系(CNS)への移行性(血液脳関門の通過性)を検討した薬物動態研究。",
       "take_home": [
-        "12ヶ月無再発生存率は78.7%(95%CI 66.6-90.9%)で、t-MPA-AUC・f-MPA-AUCいずれも無再発生存と有意に相関した(ROC AUC 各0.70、至適閾値: t-MPA-AUC=31.63 µg・h/mL、f-MPA-AUC=354.45 ng・h/mL)。",
-        "MMF関連の有害事象(ADR)は25.2%に発生し、うち血液毒性が26.2%を占めた。血糖値・β2ミクログロブリン・C3値もあわせて血液毒性の危険因子として同定された。",
-        "f-MPA-AUCは血液毒性を独立して予測し(至適閾値492.96 ng・h/mL、特異度86.2%)、効果予測ではt-MPAと同等ながら、安全性モニタリングの指標としてはf-MPAがより優れる可能性が示唆された(TDMへの応用は今後の検証が必要)。"
+        "経口ダサチニブ投与2時間後、血漿中濃度は治療域相当(平均101.6 ng/mL)に達していたのに対し、同時点のCSF中濃度は平均0.5 ng/mLと極めて低く、血漿/CSF比は中央値225:1(範囲98:1〜406:1)だった。",
+        "この結果は、全身では十分な薬物曝露が得られていても、ダサチニブが血液脳関門をほとんど通過していないことを示している。",
+        "Ph+ ALLは中枢神経系(CNS)再発が特に懸念される病型であり、ダサチニブ単独でのCNS移行性の乏しさは、髄腔内化学療法など従来のCNS指向性治療を引き続き併用する必要性を裏付ける可能性がある(単一施設・20例の予備的データである点には留意が必要)。"
       ]
     }
   ],
   "not_selected_this_week": [
     {
-      "pmid": "42572520",
-      "title": "An epidemiological assessment of hemodialysis, continuous kidney replacement therapy, and peritoneal dialysis in pediatric acute kidney injury patients.",
-      "reason": "2026-08-10号(先週)で既に深掘り紹介済みのため、重複を避け見送り。"
+      "pmid": "42580664",
+      "title": "Phase II Study of Allogeneic Hematopoietic Stem Cell Transplantation for Children and Young Adults with Ewing Sarcoma.",
+      "reason": "PubMedメタデータに抄録が未収載(Abstract not available、Articles in Press段階)で、正確な数値結果を確認できなかったため今回は見送り。次号以降、抄録が公開され次第再検討する候補。"
     },
     {
-      "pmid": "42557795",
-      "title": "Anti-nephrin autoantibodies in post-transplant recurrence of focal segmental glomerulosclerosis: a review.",
-      "reason": "レビューとして質は高いが、先週紹介したネフローゼ症候群・抗体関連トピックと主題が近く、今週は多様性を優先し見送り。"
+      "pmid": "42578524",
+      "title": "Pegaspargase Rechallenge Following Grade 2 Hypersensitivity Reaction in Childhood Acute Lymphoblastic Leukemia: Results of DFCI 16-001.",
+      "reason": "内容・臨床的価値ともに高いが、今回選定した1本目(アスパラギナーゼ+blinatumomabコンセンサス)とテーマが近接するため、3本の話題の幅を広げる目的で見送り。次点候補。"
     },
     {
-      "pmid": "42574073",
-      "title": "Type, Location and Zygosity of KCNJ16 Variants May Determine the Clinical Severity of Hypokalemia Tubulopathy and Deafness (HkTD).",
-      "reason": "興味深い遺伝学的知見だが、3家系4例の小規模症例シリーズで基礎寄りのため優先度を下げた。"
+      "pmid": "42578509",
+      "title": "Time to Diagnosis Among Children and Adolescents With Cancer in Québec, Canada: A Population-Based Study.",
+      "reason": "重要な記述疫学研究だが、臨床的インパクト・新規性の観点で今回の3本(治療戦略コンセンサス・治療アクセス格差・CNS薬物動態)ほどの優先度はないと判断。"
     },
     {
-      "pmid": "42579192",
-      "title": "Real-world modality selection and outcomes in neonatal kidney replacement therapy: a single-center cohort study.",
-      "reason": "先週の腎代替療法モダリティ比較と主題が近く、単施設研究のため見送り。"
-    },
-    {
-      "pmid": "42579641",
-      "title": "Cystatin C: Not Only a Kidney Marker but Also a Potential Early Indicator of Metabolic Alterations in Childhood Obesity.",
-      "reason": "臨床応用への直接性がやや弱く、他候補を優先。"
-    },
-    {
-      "pmid": "42575336",
-      "title": "Spectrum of Anti-Factor B-Associated Glomerular Diseases in Adults.",
-      "reason": "小児領域との関連(小児の感染関連腎炎で強く報告される機序)には言及があるが、対象集団が成人(71例)のため小児番組としては見送り。"
+      "pmid": "42574250",
+      "title": "Multiomics analysis focusing on genome-wide DNA methylation in paediatric acute promyelocytic leukaemia.",
+      "reason": "基礎研究(エピゲノム解析)で臨床応用までの距離があり、リスナー向けラジオとしての即時性・実践性を優先し見送り。"
     }
   ]
 }
