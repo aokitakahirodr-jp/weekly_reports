@@ -1,7 +1,7 @@
-# 週刊・小児悪性疾患 — 週次パイプライン手順書
+# 週刊・小児血液腫瘍 — 週次パイプライン手順書
 
 これは毎週月曜の自動実行(Routine)が新しいセッションに渡す**正典手順**です。
-実行セッションはこのファイルの指示に従い、PubMed の新着から小児悪性疾患関連トピックを選び、
+実行セッションはこのファイルの指示に従い、PubMed の新着から小児血液腫瘍関連トピックを選び、
 ラジオ台本・音声(MP3)・論文要約・インフォグラフィックを生成し、GitHub へコミット(raw 配信)、
 Notion 掲載（音源を再生できる形で埋め込み）まで行います。
 
@@ -14,12 +14,17 @@ Notion 掲載（音源を再生できる形で埋め込み）まで行います�
 
 ```yaml
 # 番組名
-show_name: "週刊・小児悪性疾患ラジオ"
+show_name: "週刊・小児血液腫瘍ラジオ"
 
 # PubMed 検索クエリ（専門領域を変えるならここ）
 pubmed_query: >-
-  (pediatric OR paediatric OR children OR childhood)
-  AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)
+  (pediatric OR paediatric OR children OR childhood OR adolescent OR "young adult")
+  AND (leukemia OR leukaemia OR lymphoma OR neuroblastoma OR "solid tumor" OR "solid tumour"
+  OR sarcoma OR "brain tumor" OR "brain tumour" OR "hematologic malignancy"
+  OR "haematologic malignancy" OR "bone marrow transplantation" OR "stem cell transplantation"
+  OR "CAR-T" OR "hematology" OR "haematology" OR anemia OR anaemia OR thrombocytopenia
+  OR hemophilia OR haemophilia OR "sickle cell" OR thalassemia OR thalassaemia
+  OR "aplastic anemia" OR "aplastic anaemia" OR neutropenia)
 
 # 1回あたりに取り上げる論文数
 topic_count: 3
@@ -53,7 +58,7 @@ hosts:
 `mcp__PubMed__search_articles` を次で実行:
 - `query`:
   ```
-  (pediatric OR paediatric OR children OR childhood) AND (kidney disease OR nephrology OR nephrotic OR nephritis OR renal)
+  (pediatric OR paediatric OR children OR childhood OR adolescent OR "young adult") AND (leukemia OR leukaemia OR lymphoma OR neuroblastoma OR "solid tumor" OR "solid tumour" OR sarcoma OR "brain tumor" OR "brain tumour" OR "hematologic malignancy" OR "haematologic malignancy" OR "bone marrow transplantation" OR "stem cell transplantation" OR "CAR-T" OR "hematology" OR "haematology" OR anemia OR anaemia OR thrombocytopenia OR hemophilia OR haemophilia OR "sickle cell" OR thalassemia OR thalassaemia OR "aplastic anemia" OR "aplastic anaemia" OR neutropenia)
   ```
 - `datetype`: `edat`（PubMed 収載日）
 - `date_from`: DATE の 7 日前 / `date_to`: DATE
@@ -63,15 +68,15 @@ hosts:
 - 各候補は `mcp__PubMed__get_article_metadata` でタイトル/著者/誌名/日付/DOI/抄録を取得。
 
 ### 2. 選定（3 本）
-- 臨床的インパクト・新規性・小児悪性疾患領域との関連度で **3 本**を選ぶ（深掘り重視。似た主題の重複は避ける）。
+- 臨床的インパクト・新規性・小児血液腫瘍領域との関連度で **3 本**を選ぶ（深掘り重視。似た主題の重複は避ける）。
 - 症例報告・純粋な基礎のみ・関連薄のものは優先度を下げる。
 - 選定結果を `reports/<DATE>/articles.json` に保存（各: pmid, title, journal, date, doi, url, one_line,
   および **`take_home`（3点の配列）**）。選外に回した候補は `not_selected_this_week` に理由付きで残す。
 
 ### 3. ラジオ台本 `reports/<DATE>/script.md` と読み上げ用 `script.txt`
-- **2話者の対話形式**。進行役 **ナオ**（聞き手・リスナー代弁）× 解説役 **マキ先生**（小児科専門）。
+- **2話者の対話形式**。進行役 **ナオ**（聞き手・リスナー代弁）× 解説役 **マキ先生**（小児血液腫瘍が専門）。
 - 構成:
-  1. オープニング（番組名「週刊・小児腎臓病ラジオ」、今週の日付、2人の自己紹介、今週は3本を深掘りする旨）
+  1. オープニング（番組名「週刊・小児血液腫瘍ラジオ」、今週の日付、2人の自己紹介、今週は3本を深掘りする旨）
   2. 各トピック（1本ずつ）: ナオの問いを挟みつつ、背景→方法/デザイン→結果→臨床的含意まで**詳しく**。
      誌名と発表時期に触れ、**PMID を口頭でも述べる**（例:「PMID は 12345678」）。
      各トピックの最後に **マキ先生が「今日の Take Home」を3点**、はっきり口頭で述べる（聞き手が持ち帰れるように）。
@@ -103,8 +108,8 @@ hosts:
      にフォールバックする。
 - push 後、**配信に使うコミット SHA** を `git rev-parse HEAD` で取得する。
 - 配信 raw URL は**ブランチ名ではなく SHA** で組み立てる（ブランチ名に依存せず、URL も不変になる）:
-  - `https://raw.githubusercontent.com/mynrminto/weekly_reports/<SHA>/reports/<DATE>/radio.mp3`
-  - `https://raw.githubusercontent.com/mynrminto/weekly_reports/<SHA>/reports/<DATE>/infographic.png`
+  - `https://raw.githubusercontent.com/aokitakahirodr-jp/weekly_reports/<SHA>/reports/<DATE>/radio.mp3`
+  - `https://raw.githubusercontent.com/aokitakahirodr-jp/weekly_reports/<SHA>/reports/<DATE>/infographic.png`
 - どちらのブランチに push したかを、最終メッセージに記す。
 
 ### 7. Notion 掲載（音源を再生できる形で埋め込む）
