@@ -1,0 +1,65 @@
+{
+  "date": "2026-08-17",
+  "show_name": "週刊・小児血液腫瘍ラジオ",
+  "search_window": {
+    "datetype": "edat",
+    "date_from": "2026-08-10",
+    "date_to": "2026-08-17",
+    "query": "(pediatric OR paediatric OR children OR childhood OR adolescent OR \"young adult\") AND (leukemia OR leukaemia OR lymphoma OR neuroblastoma OR \"solid tumor\" OR \"solid tumour\" OR sarcoma OR \"brain tumor\" OR \"brain tumour\" OR \"hematologic malignancy\" OR \"haematologic malignancy\" OR \"bone marrow transplantation\" OR \"stem cell transplantation\" OR \"CAR-T\" OR \"hematology\" OR \"haematology\" OR anemia OR anaemia OR thrombocytopenia OR hemophilia OR haemophilia OR \"sickle cell\" OR thalassemia OR thalassaemia OR \"aplastic anemia\" OR \"aplastic anaemia\" OR neutropenia)",
+    "note": "PubMed API上限のためクエリを2分割して実行し結果を統合。新着候補は疾患群検索で計148件、非悪性/CAR-T群検索で計218件（重複含む）。Review/RCT/Guidelineで絞り込み33件（重複除き32件）まで候補を精査。"
+  },
+  "selected": [
+    {
+      "pmid": "42578884",
+      "title": "Optimizing safety and efficacy of asparaginase and blinatumomab therapy in frontline acute lymphoblastic leukemia regimens in diverse health care settings-international expert consensus.",
+      "journal": "Cancer",
+      "date": "2026-08-15",
+      "doi": "10.1002/cncr.70559",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42578884/",
+      "article_type": "国際専門家コンセンサス（Consensus Statement / Review）",
+      "one_line": "小児・成人ALLの新標準となったフロントラインblinatumomab併用療法におけるアスパラギナーゼの最適用量・投与戦略について、国際専門家パネルがコンセンサスをまとめた。",
+      "take_home": [
+        "Blinatumomab併用がALL治療の新たな中心的位置づけとなる中でも、アスパラギナーゼの役割（用量・治療薬物モニタリング）は依然として重要。",
+        "アスパラギナーゼ過敏反応・不活化の予防、代謝拮抗薬との組み合わせ方について実務的な指針が示された。",
+        "資源が限られた医療環境向けに、製剤選択や投与法の調整案も提示されており、世界的な治療均てん化を意識した内容。"
+      ]
+    },
+    {
+      "pmid": "42586319",
+      "title": "Global Multicenter Study Establishing the Reference Range for ISTH-BAT Bleeding Scores in Individuals Under 18 Years: Communication from the SSC of the ISTH.",
+      "journal": "Journal of Thrombosis and Haemostasis (JTH)",
+      "date": "2026-08-12",
+      "doi": "10.1016/j.jtha.2026.07.028",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42586319/",
+      "article_type": "国際多施設研究・ISTH SSC公式コミュニケーション（Practice Guideline）",
+      "one_line": "5大陸7カ国・1168例の健常小児を対象に、出血傾向スクリーニングツールISTH-BATの18歳未満における年齢・性別基準範囲を初めて検証した国際多施設研究。",
+      "take_home": [
+        "現行の一律基準範囲（0-2点）は18歳未満の大多数に妥当であることが国際データで裏付けられた。",
+        "12〜17歳の女児では基準範囲を0-3点とすることが考慮でき、臨床背景と合わせた解釈が推奨される。",
+        "年齢が上がるほどBATスコアが上昇する傾向があり、思春期特有の変化として紹介判断に留意が必要。"
+      ]
+    },
+    {
+      "pmid": "42599331",
+      "title": "Effectiveness of oral cryotherapy in preventing methotrexate-induced oral mucositis in pediatric patients with acute lymphoblastic leukemia: a randomized controlled trial.",
+      "journal": "Supportive Care in Cancer",
+      "date": "2026-08-14",
+      "doi": "10.1007/s00520-026-11075-1",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42599331/",
+      "article_type": "単施設ランダム化比較試験（RCT）",
+      "one_line": "高用量メトトレキサート地固め療法中の小児ALL患者127例で、氷冷生理食塩水による口腔クライオセラピーが口内炎の発生率・重症度を有意に低下させたRCT。",
+      "take_home": [
+        "口腔クライオセラピー群は標準口腔ケア群に比べ、あらゆるグレードの口内炎発生率が22.0%対44.1%と有意に低かった。",
+        "重症（WHO grade≧II）の口内炎も6.8%対23.7%と減少し、多変量調整後も予防効果は維持された（調整OR 0.37）。",
+        "簡便・低コストで重大な有害事象もなく、6歳超や高用量MTX（5g/m2）群でより効果的だったが、多施設ITT試験での確認が今後必要。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {"pmid": "42601310", "title": "PET/CT In paediatric lymphoma: Current role and advances.", "reason": "画像診断のレビューで臨床的インパクト・新規性はあるが、今週は治療最適化・支持療法・診断基準の3テーマを優先"},
+    {"pmid": "42588672", "title": "Fertility Outcomes in Leukemia Survivors by Treatment Modality: A Systematic Review and Meta-Analysis.", "reason": "サバイバーシップ領域で重要だが、今週選定の3本と主題の重なり（血液腫瘍治療関連）を避けるため次点扱い"},
+    {"pmid": "42602356", "title": "ALK-negative anaplastic large cell lymphoma in pediatric and adolescent patients: a mini-review.", "reason": "ミニレビューで新規データに乏しく優先度を下げた"},
+    {"pmid": "42572810", "title": "Precision Medicine in Transfusion-Dependent and Non-Transfusion-Dependent β-Thalassemia: Toward Personalized Diagnosis and Therapy.", "reason": "非悪性血液疾患のレビューだが、今週はALL治療・支持療法・出血性疾患の3本で構成するため選外"},
+    {"pmid": "42596102", "title": "Current State of Moderate Congenital Haemophilia A and the Need for Preventive Treatment.", "reason": "血友病Aのレビューで有用だが、出血性疾患テーマはISTH-BAT論文で代表させた"}
+  ]
+}
