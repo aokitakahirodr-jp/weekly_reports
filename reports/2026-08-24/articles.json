@@ -1,0 +1,88 @@
+{
+  "issue_date": "2026-08-24",
+  "show_name": "週刊・小児血液腫瘍ラジオ",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood OR adolescent OR \"young adult\") AND (leukemia OR leukaemia OR lymphoma OR neuroblastoma OR \"solid tumor\" OR \"solid tumour\" OR sarcoma OR \"brain tumor\" OR \"brain tumour\" OR \"hematologic malignancy\" OR \"haematologic malignancy\" OR \"bone marrow transplantation\" OR \"stem cell transplantation\" OR \"CAR-T\" OR \"hematology\" OR \"haematology\" OR anemia OR anaemia OR thrombocytopenia OR hemophilia OR haemophilia OR \"sickle cell\" OR thalassemia OR thalassaemia OR \"aplastic anemia\" OR \"aplastic anaemia\" OR neutropenia)",
+    "datetype": "edat",
+    "date_from": "2026-08-17",
+    "date_to": "2026-08-24",
+    "sort": "pub_date",
+    "max_results": 30,
+    "note": "設定欄(prompts/weekly_radio_prompt.md)のPubMedクエリは32個のブール演算子を含み、検索ツールの上限(20個)を超えるため、全ての検索語を保持したまま(1)悪性疾患系ワード群(12語)と(2)造血幹細胞移植/血液疾患系ワード群(12語)の2クエリに分割して実行した。1次検索は各156件・237件と非常に多かったため、手順書の指示に従い各クエリに(Review[Publication Type] OR Randomized Controlled Trial[Publication Type] OR Guideline[Publication Type])の質フィルタを追加して再検索(演算子上限の関係でフィルタ追加時は語数を12語に調整)。フィルタ後は悪性疾患系20件・移植/血液疾患系24件(1件はメタデータ取得不可)、重複除き計35件のユニーク候補を得た。これらのタイトル・抄録をスクリーニングし、臨床的インパクト・新規性・話題の広がりを考慮して3本を選定。",
+    "config_change_note": null
+  },
+  "selected": [
+    {
+      "pmid": "42617141",
+      "title": "Translating CRISPR to Practice in the Clinic: Transformative Therapy in Hemoglobinopathies and Emerging Applications in Malignancies.",
+      "journal": "JCO Oncology Practice",
+      "date": "2026-08-19 (edat)",
+      "type": "Review",
+      "doi": "10.1200/OP-26-00479",
+      "url": "https://doi.org/10.1200/OP-26-00479",
+      "one_line": "CRISPR-Cas9遺伝子編集治療が重症鎌状赤血球症・輸血依存性βサラセミアで臨床実装された経緯と課題、および血液腫瘍領域への応用の現在地を整理した総説。",
+      "take_home": [
+        "エクサガムグロジーン・オートテムセル(exa-cel)は臨床実装された初のCRISPR-Cas9遺伝子編集治療で、自家CD34陽性造血幹細胞を体外で編集し胎児ヘモグロビンを再活性化させることで、重症鎌状赤血球症の血管閉塞発作からの解放や輸血依存性βサラセミアでの輸血非依存を長期的にもたらしている。ドナーを必要とせず、拒絶やGVHDのリスクもない同種移植の代替選択肢となる。",
+        "実装には編集技術そのもの以上に、紹介・適応評価、幹細胞の動員・採取、一元化された製造工程、薬物動態に基づく骨髄破壊的前処置、移植レベルの支持療法、妊孕性温存、心理社会的支援、長期フォローアップまで、造血細胞移植プログラムに匹敵する体制が必要。幹細胞採取の難しさ、前処置による毒性、コスト、保険償還の壁、医療アクセス格差が主な障壁として挙げられている。",
+        "腫瘍領域でのCRISPR治療はまだ研究段階で、再発・難治性のB細胞性・T細胞性悪性腫瘍、急性骨髄性白血病、多発性骨髄腫、一部の固形腫瘍で早期の臨床的実現可能性が示されているにとどまる。今後は他の治療法(遺伝子付加、同種移植)との長期比較のため、レジストリ参加を含めた慎重な患者選択と長期的な結果報告体制の整備が課題。"
+      ]
+    },
+    {
+      "pmid": "42632863",
+      "title": "Strategic roadmap for delivery of clinical trials in rare childhood central nervous system (CNS) tumours: a multi-stakeholder consensus.",
+      "journal": "British Journal of Cancer",
+      "date": "2026-08-22 (edat)",
+      "type": "Multi-stakeholder Consensus / Review",
+      "doi": "10.1038/s41416-026-03589-6",
+      "url": "https://doi.org/10.1038/s41416-026-03589-6",
+      "one_line": "英国の小児がん研究グループ(UK3CR CRG)が、頭蓋咽頭腫や脈絡叢癌など超希少な小児中枢神経系腫瘍4群について、臨床試験を成立させるための国際的な戦略ロードマップをまとめた多施設・多職種コンセンサス。",
+      "take_home": [
+        "希少な小児CNS腫瘍のうち、優先度の高い4群(頭蓋咽頭腫、脈絡叢癌(CPC)、超高リスク髄芽腫(VHR-MB)、embryonal tumour with multilayered rosettes(ETMR)を含む希少な胎児性・肉腫性腫瘍(REST))が特定され、それぞれエビデンス構築が特に手薄であることが確認された。",
+        "頭蓋咽頭腫では英国主導の臨床試験の実現可能性、CPCでは国レベルのデータ収集体制の強化、VHR-MBでは欧州規模の早期相プラットフォーム試験の支援が具体的な次のステップとして示され、RESTでは国をまたぐ規制の複雑さに対応するための国際レジストリと並行試験モデルの必要性が強調された。",
+        "規制の不一致、契約手続きの遅延、資金の分散、データ共有の制約といった共通の障壁に対し、少数例でも効率的に評価できるベイズ流・アダプティブデザインやプラットフォーム試験、外部対照群の活用、患者・家族の関与強化、国際連携の推進が今後の解決策として提案されている。"
+      ]
+    },
+    {
+      "pmid": "42610644",
+      "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
+      "journal": "Physiotherapy Research International",
+      "date": "2026-10 (in press) / 2026-08-14 (edat)",
+      "type": "Randomized Controlled Trial",
+      "doi": "10.1002/pri.70324",
+      "url": "https://doi.org/10.1002/pri.70324",
+      "one_line": "白血病・リンパ腫・脳腫瘍などで入院中の小児血液腫瘍患者30例を対象に、構造化された運動療法プログラムが疲労・QOL・筋力・機能を改善するかを検討したブラジルのランダム化比較試験(結果は有意差なし)。",
+      "take_home": [
+        "8〜17歳の入院中小児血液腫瘍患者30例を、有酸素運動・レジスタンス運動・呼吸練習・歩行指導を含む1日25分の監督下運動療法を行う介入群と、呼吸練習と歩行指導のみを行う最小限の理学療法(対照群)にランダムに割り付け、入院時と退院時に6分間歩行距離・握力・疲労スケール(PedsQL)・QOLスケール(PedsQL Cancer Module)を比較した。",
+        "疲労、QOL、握力、6分間歩行距離のいずれについても、群と時間の交互作用(介入による上乗せ効果)は統計的に有意ではなく、より強度の高い構造化運動療法が、最小限の理学療法と比べて優れているとは示されなかった。",
+        "一方で、この構造化プログラムは密な臨床監督下であれば介入関連の重篤な有害事象なく安全に実施できることが確認された。ただしサンプルサイズが小さく(30例)、疾患の多様性や介入の実施状況のばらつきもあるため、結果は慎重に解釈すべきであり、より大規模な検証が今後必要とされる。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42622520",
+      "title": "Infant Embryonal CNS Tumors: Molecular Insights and Treatment Considerations for Contemporary Pediatric Neuro-Oncology.",
+      "reason": "内容・質ともに高いが、今回選定したCNS腫瘍臨床試験ロードマップ(PMID 42632863)とテーマが近接するため、3本の話題の幅を広げる目的で見送り。次点候補。"
+    },
+    {
+      "pmid": "42614465",
+      "title": "GD2-targeted immunotherapy in pediatric bone sarcomas: a systematic review of emerging strategies and combination approaches.",
+      "reason": "免疫療法として重要な系統的レビューだが、今回はCRISPR遺伝子編集治療(PMID 42617141)を新規性の高い治療トピックとして優先したため見送り。"
+    },
+    {
+      "pmid": "42607672",
+      "title": "The Gabriella Miller Kids First Data Resource for genomic research in pediatric cancer and congenital anomalies.",
+      "reason": "重要な研究基盤(データリソース)紹介だが、直接の臨床的示唆に乏しく、リスナー向けラジオとしての即時性を優先し見送り。"
+    },
+    {
+      "pmid": "42630543",
+      "title": "Pediatric leukemia: origins, pathogenesis, the role of microenvironment and immunological modulation.",
+      "reason": "白血病の病態生理を包括的にまとめた総説で有用だが、基礎寄りの内容であり、今回選定した3本(臨床実装・試験基盤・支持療法)ほどの臨床的即時性はないと判断し見送り。"
+    }
+  ]
+}
