@@ -1,0 +1,88 @@
+{
+  "issue_date": "2026-08-28",
+  "show_name": "週刊・小児血液腫瘍ラジオ",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood OR adolescent OR \"young adult\") AND (leukemia OR leukaemia OR lymphoma OR neuroblastoma OR \"solid tumor\" OR \"solid tumour\" OR sarcoma OR \"brain tumor\" OR \"brain tumour\" OR \"hematologic malignancy\" OR \"haematologic malignancy\" OR \"bone marrow transplantation\" OR \"stem cell transplantation\" OR \"CAR-T\" OR \"hematology\" OR \"haematology\" OR anemia OR anaemia OR thrombocytopenia OR hemophilia OR haemophilia OR \"sickle cell\" OR thalassemia OR thalassaemia OR \"aplastic anemia\" OR \"aplastic anaemia\" OR neutropenia)",
+    "datetype": "edat",
+    "date_from": "2026-08-21",
+    "date_to": "2026-08-28",
+    "sort": "pub_date",
+    "max_results": 30,
+    "note": "設定欄(prompts/weekly_radio_prompt.md)のPubMedクエリは演算子数が検索ツールの上限(20個)を超えるため、全ての検索語を保持したまま(1)悪性疾患系(9語)・(2)造血器悪性腫瘍/移植関連(9語)・(3)非悪性血液疾患系(9語)の3クエリに分割して実行(各クエリはpediatric語群6ORとAND1を含め15演算子)。各クエリはヒット数が多く(119件/221件/63件)、上位30件ずつ計90件を取得し重複除去後80件のユニーク候補を得た。タイトル・抄録主要情報をスクリーニングし、症例報告・レター・基礎研究のみ・関連薄のものを除外したうえで、臨床的インパクト・新規性・小児血液腫瘍領域との関連度・話題の多様性(悪性腫瘍/自己免疫性血球減少/非悪性遺伝性疾患)を考慮して3本を選定。",
+    "config_change_note": null
+  },
+  "selected": [
+    {
+      "pmid": "42657927",
+      "title": "Treatment for relapsed pediatric acute myeloid leukemia: variability and comparative effectiveness of current approaches to re-induction.",
+      "journal": "Haematologica",
+      "date": "2026-08-27 (edat)",
+      "type": "Retrospective Cohort Study",
+      "doi": "10.3324/haematol.2026.300934",
+      "url": "https://doi.org/10.3324/haematol.2026.300934",
+      "one_line": "米国13施設の小児がん拠点病院データ(REAL-AMLデータセット)を用い、2011〜2023年に小児急性骨髄性白血病(AML)の初回再発を経験した247例における再導入療法の実態と、レジメン間の比較有効性を検討した後方視的コホート研究。",
+      "take_home": [
+        "小児AML再発後の2年生存率は46%(95%CI 39-52%)にとどまり、247例に対し実に39通りもの異なる再導入レジメンが使われていた(22%は非強化レジメン)——標準治療がいまだ確立していない現状が浮き彫りになった。",
+        "化学療法のバックボーン選択による全生存率(OS)・寛解率に統計学的有意差は認めなかったが、フルダラビン+シタラビン±G-CSFへのアントラサイクリン追加でOS改善の傾向(aHR 0.38、95%CI 0.11-1.38、有意差なし)がみられた。",
+        "ゲムツズマブオゾガマイシン(GO)の併用は寛解率・MRD陰性寛解率を有意に改善したが(aPR 1.3および1.5)、全生存率の改善までは示されなかった(aHR 1.1)——寛解導入と長期予後改善は必ずしも直結せず、前向き検証が必要。"
+      ]
+    },
+    {
+      "pmid": "42655953",
+      "title": "Sirolimus is effective for paediatric Evans syndrome and secondary autoimmune cytopenias: A retrospective cohort study.",
+      "journal": "British Journal of Haematology",
+      "date": "2026-08-26 (edat)",
+      "type": "Retrospective Cohort Study",
+      "doi": "10.1111/bjh.70795",
+      "url": "https://doi.org/10.1111/bjh.70795",
+      "one_line": "トロント小児病院(Hospital for Sick Children)から報告された、難治性のEvans症候群および二次性自己免疫性血球減少症を有する小児に対するmTOR阻害薬シロリムスの有効性を検討した後方視的コホート研究。",
+      "take_home": [
+        "Evans症候群(自己免疫性溶血性貧血と免疫性血小板減少症、時に自己免疫性好中球減少を合併する病態)は小児では難治化しやすく、既存治療に抵抗性の症例に対するステロイド節約治療の選択肢が限られていることが背景にある。",
+        "シロリムスは制御性T細胞(Treg)を増やす免疫調節作用を持つ薬剤で、この単施設コホートでは難治性Evans症候群・二次性自己免疫性血球減少症に対する有効性が報告された(詳細な奏効率や安全性プロファイルは抄録非公開のため原著本文を要確認)。",
+        "小児の難治性自己免疫性血球減少症においてmTOR阻害薬が新たな治療選択肢として位置づけられつつあり、今後は前向き試験による有効性・安全性のエビデンス構築が期待される。"
+      ]
+    },
+    {
+      "pmid": "42631589",
+      "title": "Integrated Analysis of Bone Resorption and Formation Pathways Reveals Mechanisms of Skeletal Impairment in Children With Haemophilia Not Receiving Routine Prophylaxis.",
+      "journal": "Haemophilia",
+      "date": "2026-08-22 (edat)",
+      "type": "Case-Control Study",
+      "doi": "10.1111/hae.70373",
+      "url": "https://doi.org/10.1111/hae.70373",
+      "one_line": "定期的な凝固因子補充療法(プロフィラキシス)を受けていない血友病児童を対象に、骨密度と骨代謝マーカー(RANKL、OPG、スクレロスチン、DKK1)、ミネラル代謝パラメータを健常対照と比較し、骨脆弱性の機序を統合的に解析した症例対照研究。",
+      "take_home": [
+        "定期補充療法を受けていない血友病児童は、年齢を一致させた健常対照に比べ腰椎骨密度が有意に低下しており、出血症状の陰に隠れがちな『骨の健康』も見過ごせない合併症であることが示された。",
+        "背景には破骨細胞形成の亢進(RANKL上昇、OPGは不変で骨吸収指数(RANKL/OPG比)が上昇)と、骨形成の抑制(Wnt阻害因子スクレロスチンの上昇)、さらにカルシウム・リン・ALP低下による石灰化障害という複合的な骨代謝異常があった。",
+        "骨吸収指数(RANKL/OPG比)は骨密度低下と有意に相関し、ROC解析でも高い診断能を示したことから、血友病児童における骨脆弱性の早期スクリーニング指標となる可能性が示唆された。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42640163",
+      "title": "Consolidation Therapy Based on Mutation Clearance in Acute Myeloid Leukemia.",
+      "reason": "NEJM Evidence掲載の前向き第II相試験で臨床的インパクトは高いが、対象年齢が18〜60歳の成人AML患者に限定されており、小児血液腫瘍という番組テーマとの直接的関連が薄いため見送り。"
+    },
+    {
+      "pmid": "42640860",
+      "title": "Inhibition of nucleoporin 214 depletes leukemia stem cells by promoting heme catabolism and lipid peroxidation.",
+      "reason": "Blood誌掲載でAML白血病幹細胞の新規標的(NUP214)を示す興味深い基礎研究だが、細胞株・マウスモデル中心の基礎研究段階であり、臨床応用にはまだ距離があるため、より臨床インパクトの大きい3本を優先し見送り。次点候補。"
+    },
+    {
+      "pmid": "42648464",
+      "title": "A Human Stem Cell Model of Neuroblastoma Identifies Four Chromosome 17q Genes that Drive Tumor Initiation and Progression.",
+      "reason": "神経芽腫の発症機序に迫る重要な基礎研究だが、ヒト幹細胞モデルを用いた基礎的知見にとどまり、臨床的示唆の即時性を優先する観点から見送り。"
+    },
+    {
+      "pmid": "42657661",
+      "title": "Feasibility of Real-Time Central Risk Assignment for Children's Oncology Group Pediatric Renal Tumor Trials.",
+      "reason": "COGの腎腫瘍臨床試験基盤に関する実務的に重要な報告だが、今回選定した3本(白血病再発治療・自己免疫性血球減少・非悪性遺伝性疾患の骨合併症)で話題の幅を確保したため見送り。"
+    }
+  ]
+}
