@@ -1,7 +1,12 @@
-# 週刊・小児腎臓病ラジオ — 無人実行(トークン方式)手順書
+# 週刊・小児血液腫瘍ラジオ — 無人実行(トークン方式)手順書
 
 これは **MCP コネクタを持たない無人クラウドセッション**(週次 Routine が起動)向けの手順です。
 コネクタの代わりに、外部アクセスは**環境変数のトークン＋公開 HTTP API** で行います。
+
+> **番組名・PubMed 検索クエリ・話者・本数は、`prompts/weekly_radio_prompt.md` の「設定欄」を正とします。**
+> このファイルには設定欄を置きません（二重管理を避けるため）。専門領域を変えるときは
+> あちらの設定欄だけを書き換えてください。`scripts/pubmed_fetch.py` も `--query` 省略時は
+> 設定欄の `pubmed_query` を読みます。
 
 ## この方式が動く前提(環境側の設定)
 
@@ -29,21 +34,30 @@ Notion 側: 内部インテグレーションを作成し、掲載先 DB に「�
 ### 0. 準備
 - `git fetch origin main && git checkout main && git pull`。`pip install -r scripts/requirements.txt`。
 - 当日(UTC)の日付を `DATE`（YYYY-MM-DD）とし、`reports/<DATE>/` を作業ディレクトリにする。
-- リポジトリのフルネーム（例 `mynrminto/weekly_reports`）を `REPO` として控える（raw URL に使う）。
+- リポジトリのフルネーム（例 `aokitakahirodr-jp/weekly_reports`）を `REPO` として控える（raw URL に使う）。
 
 ### 1. PubMed 候補取得(公開 API)
 ```bash
 python scripts/pubmed_fetch.py --date-to <DATE> --days 7 --max 30 \
   --out reports/<DATE>/candidates.json
 ```
+`--query` を渡さないこと（設定欄の `pubmed_query` が自動で使われる。渡すと設定欄を上書きしてしまう）。
 `candidates.json` の `candidates[]`（pmid/title/journal/pubdate/doi/authors/abstract/url）を読む。
+`candidates.json` の `query` フィールドに実際に使われたクエリが記録されるので、
+意図した領域で検索されたかはここで確認できる。
 
 ### 2. 選定(3 本)
-- 臨床的インパクト・新規性・小児腎臓病との関連度で **3 本**を選ぶ（深掘り重視、主題の重複を避ける／症例報告・関連薄は下げる）。
-- `reports/<DATE>/articles.json` に保存（`issue_date`, `search`, `selected[]`。各: pmid, title, journal, date, type, doi, url, one_line, **`take_home`（3点配列）**）。選外候補は `not_selected_this_week` に理由付きで残す。
+- 臨床的インパクト・新規性・小児血液腫瘍領域との関連度・**掲載誌の格**の4要素で **3 本**を選ぶ
+  （深掘り重視、主題の重複を避ける／症例報告・関連薄は下げる）。
+- **掲載誌の格**は `prompts/weekly_radio_prompt.md` の設定欄 `journal_tiers` を参照する
+  （tier1 > tier2 > tier3。表にない誌は tier3）。扱い方は同ファイル手順2の規定に従うこと。要点:
+  他の3要素が同程度なら上位ティアを採る／上位ティアでも関連が薄ければ採らない／
+  3本を tier1 で揃えること自体を目的にしない。
+- **IF の数値には触れない**（PubMed は IF を返さず、記憶に頼った数値は誤りになる）。
+- `reports/<DATE>/articles.json` に保存（`issue_date`, `search`, `selected[]`。各: pmid, title, journal, date, type, doi, url, one_line, **`journal_tier`**, **`take_home`（3点配列）**）。選外候補は `not_selected_this_week` に理由付きで残す。
 
 ### 3. 台本 `script.md` / 読み上げ用 `script.txt`
-- **2話者の対話形式**。進行役 **ナオ**（聞き手）× 解説役 **マキ先生**（小児腎臓病専門）。
+- **2話者の対話形式**。進行役 **ナオ**（聞き手）× 解説役 **マキ先生**（小児血液腫瘍が専門）。
 - オープニング（2人の自己紹介＋今週は3本を深掘り）→各トピック（ナオの問いを挟み、背景→デザイン→結果→臨床的含意まで詳しく。PMID を口頭でも。**末尾にマキ先生が「今日の Take Home」を3点**明言）→クロージング（共通テーマ）。
 - 8〜10 分相当（約 3,000〜4,000 字）。断定を避け原著参照を促す。
 - `script.txt` は Markdown 記号・URL を除いた素のテキスト。**各発話を `ナオ: …` / `マキ先生: …` の話者ラベル付き**にし、発話ごとに空行で区切る。

@@ -1,6 +1,6 @@
-# weekly_reports — 週刊・小児腎臓病ラジオ
+# weekly_reports — 週刊・小児血液腫瘍ラジオ
 
-毎週月曜、PubMed の新着から**小児腎臓病(pediatric kidney disease)**のトピックを自動で探し、
+毎週月曜、PubMed の新着から**小児血液腫瘍(pediatric hematology-oncology)**のトピックを自動で探し、
 ラジオ番組風に紹介する**音声(MP3)**を Gemini TTS で生成し、論文要約と**インフォグラフィック**を
 **Notion** に掲載、**完了通知メール**でリンクを届ける自動化です。
 
@@ -61,9 +61,9 @@ Chromium はこの実行環境に同梱済み（`PLAYWRIGHT_BROWSERS_PATH=/opt/p
 - `GEMINI_TTS_VOICE`（既定 `Kore`）
 
 ### 3. Notion 掲載先データベース
-Notion に新規ハブページ「[週刊・小児腎臓病ラジオ](https://app.notion.com/p/3a84bd470a818169afbcefb2f3b7f11b)」と
-その配下のデータベース「週刊・小児腎臓病ラジオ（各号）」を作成済み。掲載先の `data_source_id` は
-`1a961a49-2238-4dcb-87fc-53c23ffcb5d7`（`prompts/weekly_radio_prompt.md` に設定済み）。
+掲載先の `data_source_id` は **`prompts/weekly_radio_prompt.md` の「前提」節を正**とします
+（ハブページ URL もそちらに記載）。ここには ID を書きません — 過去に手順書と食い違った ID が
+残っていたためです。無人実行(トークン方式)では環境変数 `NOTION_PARENT_ID` で上書きできます。
 
 ## 手動実行（1 週分）
 ```bash

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch pediatric-kidney-disease candidate articles from PubMed via E-utilities.
+"""Fetch candidate articles from PubMed via E-utilities.
 
 This is the connector-free (token-optional) replacement for the PubMed MCP,
 so the weekly pipeline can run unattended in a fired cloud session that has no
@@ -20,6 +20,7 @@ import argparse
 import datetime as _dt
 import json
 import os
+import re
 import sys
 import time
 import xml.etree.ElementTree as ET
@@ -27,16 +28,45 @@ import xml.etree.ElementTree as ET
 import requests
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
-TOOL = "weekly_reports_pediatric_kidney"
+TOOL = "weekly_reports_pediatric_hemonc"
 EMAIL = os.environ.get("NCBI_EMAIL", "")
 API_KEY = os.environ.get("NCBI_API_KEY", "")
 
-DEFAULT_QUERY = (
-    "(pediatric OR paediatric OR children OR childhood) AND "
-    "(kidney disease OR nephrology OR nephrotic OR nephritis OR renal)"
+# The search query lives in one place only: the 設定欄 of the canonical
+# instruction file. Duplicating it here would let the two drift apart, which is
+# exactly how this script ended up searching a different specialty than the
+# pipeline it feeds.
+PROMPT_FILE = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "prompts", "weekly_radio_prompt.md",
 )
 TIMEOUT = 60
 MAX_RETRIES = 4
+
+
+def default_query(path: str = PROMPT_FILE) -> str:
+    """Read `pubmed_query` out of the YAML 設定欄 in the instruction file."""
+    try:
+        with open(path, encoding="utf-8") as fh:
+            text = fh.read()
+    except OSError as exc:
+        sys.exit(f"[pubmed] cannot read {path}: {exc}\n"
+                 f"[pubmed] pass --query explicitly instead.")
+
+    block = re.search(r"^```yaml\n(.*?)^```", text, re.S | re.M)
+    if not block:
+        sys.exit(f"[pubmed] no ```yaml settings block found in {path}\n"
+                 f"[pubmed] pass --query explicitly instead.")
+
+    # `pubmed_query: >-` folded scalar: take the indented lines that follow and
+    # join them with single spaces, the same way YAML would.
+    q = re.search(r"^pubmed_query:\s*>-?\s*\n((?:[ \t]+\S.*\n?)+)",
+                  block.group(1), re.M)
+    if not q:
+        sys.exit(f"[pubmed] no `pubmed_query` in the settings block of {path}\n"
+                 f"[pubmed] pass --query explicitly instead.")
+
+    return " ".join(line.strip() for line in q.group(1).splitlines() if line.strip())
 
 
 def _common_params() -> dict:
@@ -173,19 +203,23 @@ def _extract_pubdate(art: ET.Element) -> str:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Fetch PubMed candidates (E-utilities, connector-free)")
-    ap.add_argument("--query", default=DEFAULT_QUERY, help="PubMed search term")
+    ap.add_argument("--query", default=None,
+                    help="PubMed search term (default: `pubmed_query` from "
+                         "prompts/weekly_radio_prompt.md)")
     ap.add_argument("--date-to", default=None, help="end date YYYY-MM-DD (default: today UTC)")
     ap.add_argument("--days", type=int, default=7, help="window size in days (default 7)")
     ap.add_argument("--max", type=int, default=30, help="max candidates (default 30)")
     ap.add_argument("--out", required=True, help="output JSON path")
     args = ap.parse_args()
 
+    query = args.query or default_query()
+
     date_to = args.date_to or _dt.datetime.utcnow().strftime("%Y-%m-%d")
     d_to = _dt.datetime.strptime(date_to, "%Y-%m-%d")
     date_from = (d_to - _dt.timedelta(days=args.days)).strftime("%Y-%m-%d")
 
     print(f"[pubmed] searching {date_from}..{date_to} (edat), max={args.max}")
-    pmids = esearch(args.query, date_from, date_to, args.max)
+    pmids = esearch(query, date_from, date_to, args.max)
     print(f"[pubmed] {len(pmids)} PMIDs")
     meta = efetch_abstracts(pmids)
     # Preserve esearch ordering (newest first by pub date).
@@ -194,7 +228,7 @@ def main() -> None:
     os.makedirs(os.path.dirname(os.path.abspath(args.out)) or ".", exist_ok=True)
     with open(args.out, "w", encoding="utf-8") as fh:
         json.dump({
-            "query": args.query,
+            "query": query,
             "date_from": date_from,
             "date_to": date_to,
             "count": len(candidates),
