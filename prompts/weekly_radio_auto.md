@@ -47,8 +47,14 @@ python scripts/pubmed_fetch.py --date-to <DATE> --days 7 --max 30 \
 意図した領域で検索されたかはここで確認できる。
 
 ### 2. 選定(3 本)
-- 臨床的インパクト・新規性・小児血液腫瘍領域との関連度で **3 本**を選ぶ（深掘り重視、主題の重複を避ける／症例報告・関連薄は下げる）。
-- `reports/<DATE>/articles.json` に保存（`issue_date`, `search`, `selected[]`。各: pmid, title, journal, date, type, doi, url, one_line, **`take_home`（3点配列）**）。選外候補は `not_selected_this_week` に理由付きで残す。
+- 臨床的インパクト・新規性・小児血液腫瘍領域との関連度・**掲載誌の格**の4要素で **3 本**を選ぶ
+  （深掘り重視、主題の重複を避ける／症例報告・関連薄は下げる）。
+- **掲載誌の格**は `prompts/weekly_radio_prompt.md` の設定欄 `journal_tiers` を参照する
+  （tier1 > tier2 > tier3。表にない誌は tier3）。扱い方は同ファイル手順2の規定に従うこと。要点:
+  他の3要素が同程度なら上位ティアを採る／上位ティアでも関連が薄ければ採らない／
+  3本を tier1 で揃えること自体を目的にしない。
+- **IF の数値には触れない**（PubMed は IF を返さず、記憶に頼った数値は誤りになる）。
+- `reports/<DATE>/articles.json` に保存（`issue_date`, `search`, `selected[]`。各: pmid, title, journal, date, type, doi, url, one_line, **`journal_tier`**, **`take_home`（3点配列）**）。選外候補は `not_selected_this_week` に理由付きで残す。
 
 ### 3. 台本 `script.md` / 読み上げ用 `script.txt`
 - **2話者の対話形式**。進行役 **ナオ**（聞き手）× 解説役 **マキ先生**（小児血液腫瘍が専門）。

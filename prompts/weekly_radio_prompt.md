@@ -29,6 +29,50 @@ pubmed_query: >-
 # 1回あたりに取り上げる論文数
 topic_count: 3
 
+# 掲載誌の格による優先度（= インパクトファクターの代理指標）
+# PubMed は IF を返さないため（JCR は Clarivate のライセンス製品）、誌名のティア表で代替する。
+# 誌名は ISO 略記・フルタイトルのどちらでも一致させてよい（大文字小文字・句読点は無視）。
+journal_tiers:
+  # tier1: 総合誌トップ＋領域最上位（最優先）
+  tier1:
+    - "N Engl J Med"
+    - "Lancet"
+    - "JAMA"
+    - "Nature"
+    - "Science"
+    - "Cell"
+    - "Nat Med"
+    - "Lancet Oncol"
+    - "Lancet Haematol"
+    - "Lancet Child Adolesc Health"
+    - "J Clin Oncol"
+    - "Blood"
+    - "JAMA Oncol"
+    - "Ann Oncol"
+    - "Cancer Cell"
+    - "Nat Rev Clin Oncol"
+    - "Nat Rev Cancer"
+    - "Blood Cancer Discov"
+    - "Leukemia"
+  # tier2: 領域主要誌（tier1 に次ぐ）
+  tier2:
+    - "Haematologica"
+    - "Blood Adv"
+    - "Am J Hematol"
+    - "Br J Haematol"
+    - "Blood Cancer J"
+    - "HemaSphere"
+    - "Bone Marrow Transplant"
+    - "Transplant Cell Ther"
+    - "Pediatr Blood Cancer"
+    - "Neuro Oncol"
+    - "Clin Cancer Res"
+    - "J Thromb Haemost"
+    - "JAMA Pediatr"
+    - "Pediatrics"
+    - "J Natl Cancer Inst"
+  # 上記以外はすべて tier3 として扱う（除外はしない）
+
 # 2話者の設定（name は台本の話者ラベルと完全一致させる。voice は Gemini の音声名）
 hosts:
   - { role: "進行役", name: "ナオ",     voice: "Puck" }   # 聞き手・リスナー代弁
@@ -64,14 +108,35 @@ hosts:
 - `date_from`: DATE の 7 日前 / `date_to`: DATE
 - `sort`: `pub_date` / `max_results`: 30
 - ヒットが多い場合や質を優先したい場合は、`AND (Review[Publication Type] OR Randomized Controlled Trial[Publication Type] OR Guideline[Publication Type])`
-  や主要誌フィルタで追加抽出して候補を絞る。
+  で追加抽出して候補を絞る。
+- ここでは**誌名で足切りをしない**（設定欄 `journal_tiers` は手順2の優先度づけに使うものであって、
+  検索段階の除外条件ではない。ティア外の誌に載った重要な報告を取りこぼさないため）。
 - 各候補は `mcp__PubMed__get_article_metadata` でタイトル/著者/誌名/日付/DOI/抄録を取得。
 
 ### 2. 選定（3 本）
-- 臨床的インパクト・新規性・小児血液腫瘍領域との関連度で **3 本**を選ぶ（深掘り重視。似た主題の重複は避ける）。
-- 症例報告・純粋な基礎のみ・関連薄のものは優先度を下げる。
+次の4要素で **3 本**を選ぶ（深掘り重視。似た主題の重複は避ける）。
+
+1. 臨床的インパクト
+2. 新規性
+3. 小児血液腫瘍領域との関連度
+4. **掲載誌の格**（設定欄 `journal_tiers`。tier1 > tier2 > tier3 の順に優先度を上げる）
+
+**4 の扱い方**:
+- 1〜3 が同程度の候補が並んだときは、**上位ティアの誌に載ったものを採る**（第一の同点決着基準）。
+- 上位ティアであることは、1〜3 を覆す理由にはならない。**tier1 でも小児血液腫瘍との関連が薄ければ採らない**
+  （例: 成人のみを対象にした試験、小児への外挿が困難なもの）。逆に、tier3 でも小児血液腫瘍の臨床を
+  変えるような報告は積極的に採る。
+- **3 本すべてを tier1 で揃えることを目的にしない。** その週の tier1 が該当2本しかなければ、
+  3 本目は tier2/tier3 から 1〜3 の基準で選ぶ。
+- 症例報告・純粋な基礎のみ・関連薄のものは、掲載誌のティアに関わらず優先度を下げる。
+
+> **IF の数値には触れないこと。** PubMed は IF を返さず、記憶に頼った数値は誤りになる。
+> ティアは「主要誌かどうか」の目安であって IF そのものではないため、台本・要約・
+> インフォグラフィックのいずれにも具体的な IF 値や「IF◯◯の雑誌」といった表現を書かない。
+
 - 選定結果を `reports/<DATE>/articles.json` に保存（各: pmid, title, journal, date, doi, url, one_line,
-  および **`take_home`（3点の配列）**）。選外に回した候補は `not_selected_this_week` に理由付きで残す。
+  **`journal_tier`（`tier1` / `tier2` / `tier3`）**、および **`take_home`（3点の配列）**）。
+  選外に回した候補は `not_selected_this_week` に理由付きで残す。
 
 ### 3. ラジオ台本 `reports/<DATE>/script.md` と読み上げ用 `script.txt`
 - **2話者の対話形式**。進行役 **ナオ**（聞き手・リスナー代弁）× 解説役 **マキ先生**（小児血液腫瘍が専門）。
