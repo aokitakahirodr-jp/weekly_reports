@@ -1,0 +1,88 @@
+{
+  "issue_date": "2026-08-31",
+  "show_name": "週刊・小児血液腫瘍ラジオ",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood OR adolescent OR \"young adult\") AND (leukemia OR leukaemia OR lymphoma OR neuroblastoma OR \"solid tumor\" OR \"solid tumour\" OR sarcoma OR \"brain tumor\" OR \"brain tumour\" OR \"hematologic malignancy\" OR \"haematologic malignancy\" OR \"bone marrow transplantation\" OR \"stem cell transplantation\" OR \"CAR-T\" OR \"hematology\" OR \"haematology\" OR anemia OR anaemia OR thrombocytopenia OR hemophilia OR haemophilia OR \"sickle cell\" OR thalassemia OR thalassaemia OR \"aplastic anemia\" OR \"aplastic anaemia\" OR neutropenia)",
+    "datetype": "edat",
+    "date_from": "2026-08-24",
+    "date_to": "2026-08-31",
+    "sort": "pub_date",
+    "max_results": 30,
+    "note": "設定欄(prompts/weekly_radio_prompt.md)のPubMedクエリは演算子数が検索ツールの上限(20個)を超えるため、全ての検索語を保持したまま(1)悪性疾患系(9語)・(2)造血器悪性腫瘍/移植関連(9語)・(3)非悪性血液疾患系(9語)の3クエリに分割して実行(各クエリはpediatric語群6ORとAND1を含む)。各クエリのヒット数は115件/181件/109件(計405件)、上位30件ずつ計90件を取得し重複除去後74件のユニーク候補を得た。うち2件(PMID 42657927, 42655953)は前号(2026-08-28号)で既に取り上げ済みのため除外し、72件を screening 対象とした。タイトル・抄録を確認し、症例報告・レター・成人中心の基礎研究のみのものを除外したうえで、臨床的インパクト・新規性・エビデンスレベル(RCT優先)・小児血液腫瘍領域との関連度・話題の多様性(造血幹細胞疾患/免疫療法合併症/非悪性血液疾患)を考慮して3本を選定。",
+    "config_change_note": null
+  },
+  "selected": [
+    {
+      "pmid": "42665434",
+      "title": "HOPE Kids 2: Phase 3, Randomized Trial of Voxelotor in Children With SCD and Conditional Cerebral Blood Flow Velocities.",
+      "journal": "American Journal of Hematology",
+      "date": "2026-08-28 (edat)",
+      "type": "Phase 3 Randomized Controlled Trial (multicenter, double-blind, placebo-controlled)",
+      "doi": "10.1002/ajh.70457",
+      "url": "https://doi.org/10.1002/ajh.70457",
+      "one_line": "脳卒中リスクと相関する脳血流速度(CBFV)が境界域(170〜200cm/s未満)の小児鎌状赤血球症(SCD)患者236例(2〜15歳未満、8割がサブサハラアフリカ)を対象に、経口HbS重合阻害薬ボクセロトルの効果を検証した第III相多施設二重盲検プラセボ対照試験(HOPE Kids 2)。",
+      "take_home": [
+        "ボクセロトル群はプラセボ群に比べ24週時点でCBFVが有意に低下した(群間差-7.77cm/s、95%CI -13.18〜-2.37、p=0.0048)。効果は48週まで持続し、ヘモグロビン値も上昇した。",
+        "しかし2024年5月、ボクセロトル群で死亡例の偏り(8例 vs プラセボ群2例)が確認され投与が一時中断、同年9月にはボクセロトル関連の全試験プログラムが中止に至った(治験担当医は死亡と治験薬との因果関係は否定的と判断)。鎌状赤血球クリーゼの発現率もボクセロトル群で高かった(59.2% vs 37.9%)。",
+        "有効性シグナル(CBFV低下)と安全性シグナル(死亡例の偏り)が同時に示された結果となり、HbS重合阻害という治療戦略の今後の位置づけは不透明——原著データと規制当局の判断の推移を注視する必要がある。"
+      ]
+    },
+    {
+      "pmid": "42660975",
+      "title": "Tisa-cel and axi-cel CAR structure influences the development of resistance to CD19-CAR-T therapy.",
+      "journal": "Leukemia",
+      "date": "2026-08-27 (edat)",
+      "type": "Translational/Mechanistic Study",
+      "doi": "10.1038/s41375-026-03081-3",
+      "url": "https://doi.org/10.1038/s41375-026-03081-3",
+      "one_line": "B細胞性腫瘍に対するCD19標的CAR-T細胞療法後の再発の主因であるCD19抗原喪失について、tisagenlecleucel(4-1BB共刺激ドメイン、小児B-ALLの主力製剤)とaxicabtagene ciloleucel(CD28共刺激ドメイン)というCAR構造の違いがCD19喪失(治療抵抗性)の発生に与える影響を検証した基礎・数理モデル研究。スペインの小児血液腫瘍グループ(La Paz大学病院ほか)が参加。",
+      "take_home": [
+        "同じFMC63エピトープを標的にしながら共刺激ドメイン構造が異なる2種類のCAR-T(4-1BB型=tisa-cel相当、CD28型=axi-cel相当)のうち、4-1BB型への反復曝露はCD19抗原そのものの喪失(スプライシング異常・ヘテロ接合性喪失・フレームシフト変異など)を誘導したが、CD28型ではこの傾向は見られなかった。",
+        "数理モデル解析では、4-1BB型CARがCD19陰性細胞を排除しきれないことが抵抗性クローンの選択・増殖を促す一因と示唆され、臨床で報告されている「tisa-celはaxi-celよりCD19変異による再発率が高い」という観察と符合する。",
+        "診断でよく使われる抗CD19モノクローナル抗体の多くはFMC63とは異なるエピトープを認識するため、CD19陽性という検査結果が偽陰性的に見過ごされる恐れがある——CAR-T治療歴のある再発例の評価にはFMC63特異的な検査が必要と提言している。"
+      ]
+    },
+    {
+      "pmid": "42661530",
+      "title": "First-line hetrombopag combined with immunosuppressive therapy for paediatric severe aplastic anaemia: A prospective randomized controlled trial.",
+      "journal": "British Journal of Haematology",
+      "date": "2026-08-28 (edat)",
+      "type": "Prospective Randomized Controlled Trial (single-center)",
+      "doi": "10.1111/bjh.70636",
+      "url": "https://doi.org/10.1111/bjh.70636",
+      "one_line": "中国・北京の単施設から報告された、新規発症の小児重症再生不良性貧血(SAA)54例を対象に、標準的な免疫抑制療法(IST)単独と、トロンボポエチン受容体作動薬ヘトロンボパグ(HPAG)併用の効果を比較した前向きランダム化比較試験。",
+      "take_home": [
+        "6カ月時点の完全奏効率(CRR)はIST単独群59.3%・HPAG併用群62.9%(p=0.948)、総合奏効率(ORR)は両群とも85.2%と同一——併用による統計学的な上乗せ効果は示されなかった。12カ月時点でも同様の傾向が続いた。",
+        "サブグループ解析では、9歳超の患児に限り3カ月時点のCRRがHPAG併用群で有意に高かった(44.4% vs 27.3%、p=0.049)。年齢層によっては早期奏効に寄与する可能性が示唆されるが、検証的な位置づけではない。",
+        "HPAG併用群ではGrade3以上の有害事象(主に肝酵素上昇)が8例に発生したが、いずれも治療継続可能な範囲で管理された。著者らは「小児SAAの一次治療としてHPAGを定型的に併用する根拠は乏しい」と結論——成人領域のデータがそのまま小児に外挿できるとは限らない好例。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42660130",
+      "title": "Venetoclax added to dose-adjusted EPOCH-R for newly diagnosed double-hit lymphomas: phase 2 results from ALLIANCE A051701.",
+      "reason": "Lancet Haematology掲載の第II-III相RCTで臨床的インパクトは高いが、対象は18〜80歳(中央値65歳)の成人double-hit lymphoma患者であり、小児血液腫瘍という番組テーマとの直接的関連が薄い。また併用群で過剰死亡により早期中止となった陰性寄りの結果でもあり見送り。"
+    },
+    {
+      "pmid": "42665020",
+      "title": "Belumosudil Demonstrates Steroid-Sparing, Safety and Efficacy in Pediatric Chronic Graft Versus Host Disease.",
+      "reason": "小児cGVHDへのROCK2阻害薬belumosudilの有効性を示す興味深い報告だが、単施設・後方視的・11例のみとエビデンスレベルが今週の他候補(前向きRCT2本)に比べて低く、優先順位を下げて見送り。次点候補。"
+    },
+    {
+      "pmid": "42637517",
+      "title": "Single-cell chromatin profiling reveals relapse-related priming in pediatric acute myeloid leukemia.",
+      "reason": "小児AML再発の分子機序に迫るシングルセルクロマチン解析研究で、番組テーマとの関連は強いが、16検体規模の基礎的・探索的なバイオマーカー研究であり、臨床応用にはまだ距離があるため、より臨床的意思決定に直結する3本を優先し見送り。"
+    },
+    {
+      "pmid": "42663567",
+      "title": "Clinical and Epidemiological Characteristics of Infants <6 Months With Leukemia, Neuroblastoma, and Retinoblastoma in a Single Center in Iran.",
+      "reason": "乳児期悪性腫瘍の実態を示す記述的研究として意義はあるが、単施設の後方視的記述研究にとどまり、今週選定した3本(RCT2本＋高インパクト誌の機序解明研究)に比べ新規性・エビデンスレベルの優先度が低いため見送り。"
+    }
+  ]
+}
