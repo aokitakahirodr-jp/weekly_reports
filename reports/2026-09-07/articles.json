@@ -1,0 +1,82 @@
+{
+  "show_name": "週刊・小児血液腫瘍ラジオ",
+  "date": "2026-09-07",
+  "pubmed_query": "(pediatric OR paediatric OR children OR childhood OR adolescent OR \"young adult\") AND (leukemia OR leukaemia OR lymphoma OR neuroblastoma OR \"solid tumor\" OR \"solid tumour\" OR sarcoma OR \"brain tumor\" OR \"brain tumour\" OR \"hematologic malignancy\" OR \"haematologic malignancy\" OR \"bone marrow transplantation\" OR \"stem cell transplantation\" OR \"CAR-T\" OR \"hematology\" OR \"haematology\" OR anemia OR anaemia OR thrombocytopenia OR hemophilia OR haemophilia OR \"sickle cell\" OR thalassemia OR thalassaemia OR \"aplastic anemia\" OR \"aplastic anaemia\" OR neutropenia)",
+  "search_note": "PubMed MCP rejected the full query (>20 boolean operators); split into two sub-queries (solid-tumor/leukemia/lymphoma terms; and transplant/benign-hematology terms), same date window (edat 2026-08-31–2026-09-07), results merged and de-duplicated (58 unique candidates).",
+  "date_from": "2026-08-31",
+  "date_to": "2026-09-07",
+  "datetype": "edat",
+  "candidate_count": 58,
+  "topic_count": 3,
+  "articles": [
+    {
+      "pmid": "42696604",
+      "title": "How I Treat Pediatric Hematology-Oncology Patients from Families Identifying as Jehovah's Witnesses",
+      "journal": "Blood",
+      "date": "2026-09-04",
+      "doi": "10.1182/blood.2026033728",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42696604/",
+      "one_line": "エホバの証人家庭の小児血液腫瘍患者ケアについて、3つの症例を通じ輸血回避と患者中心ケアの両立を論じた『How I Treat』総説。",
+      "take_home": [
+        "輸血に対する家族・本人の考えは一様ではなく、思春期患者では自律性と信仰の深さの評価が重要。",
+        "貧血・出血予防、血液温存技術など、輸血曝露を減らす具体的な代替戦略がある。",
+        "乳児の重症再生不良性貧血など生命に関わる場面では、法的介入も選択肢となりうるが、事前の対話と信頼構築が最優先。"
+      ]
+    },
+    {
+      "pmid": "42700735",
+      "title": "Dinutuximab beta with TEMIRI chemotherapy in relapsed/refractory neuroblastoma: Real-world insights into the open question of GD2 expression",
+      "journal": "Translational Oncology",
+      "date": "2026-09-05",
+      "doi": "10.1016/j.tranon.2026.103013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42700735/",
+      "one_line": "再発・難治性神経芽腫25例の実臨床データで、ジヌツキシマブベータ+TEMIRI療法の奏効率とGD2発現の動的変化を報告。",
+      "take_home": [
+        "全体奏効率52%、骨・骨髄転移巣では67〜92%と高く、短期集中スケジュールが実臨床でも有効な選択肢。",
+        "治療中にGD2陽性腫瘍細胞の割合が平均88%から62%へ低下し、原発巣・軟部病変は反応性が乏しかった。",
+        "GD2発現は治療とともに動的に変化するため、抗GD2療法の適応判断や再治療戦略には経時的な評価が必要。"
+      ]
+    },
+    {
+      "pmid": "42688910",
+      "title": "Exposure to outdoor ultrafine particle number concentrations and incidence of childhood cancer: A population-based cohort study",
+      "journal": "Environmental Epidemiology",
+      "date": "2026-09-01",
+      "doi": "10.1097/EE9.0000000000000528",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42688910/",
+      "one_line": "カナダの出生コホート約96.5万人を追跡し、出生前の大気中超微小粒子(UFP)曝露と小児がん罹患の関連を検討。",
+      "take_home": [
+        "出生前UFP曝露が高いほど急性リンパ性白血病(HR 1.12)と神経芽腫(HR 1.15)のリスクがやや高い傾向が見られたが、信頼区間は帰無仮説を含む。",
+        "中枢神経系腫瘍とは関連がなく、リンパ腫はむしろ負の関連と、がん種によって結果が異なった。",
+        "関連は示唆的で確定的ではなく、大気環境と小児がんリスクの機序解明にはさらなる研究が必要。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42702054",
+      "title": "Revisiting invasive fungal infections in acute lymphoblastic leukemia: a systematic review and meta-analysis",
+      "reason": "本文中で小児コホートを明示的に除外しており(成人ALL対象)、対象外領域のため見送り。"
+    },
+    {
+      "pmid": "42702062",
+      "title": "Targeted RNA sequencing supports risk stratification... in AYA and adult ALL",
+      "reason": "AYA/成人混在の単施設後方視的経験で、症例数・新規性ともに他候補に劣後。"
+    },
+    {
+      "pmid": "42698068",
+      "title": "Age as a core disease modifier: essential thrombocythaemia in adolescents and young adults",
+      "reason": "希少疾患かつ観察研究で、今週の3本と比べ臨床的インパクトが限定的と判断。"
+    },
+    {
+      "pmid": "42669944",
+      "title": "Successful Engraftment Following Second Cord Blood Transplantation After Graft Failure in a Child With Relapsed B-ALL",
+      "reason": "症例報告のため優先度を下げた。"
+    },
+    {
+      "pmid": "42686228-42686237",
+      "title": "Surg Oncol Clin N Am 小児腫瘍外科レビューシリーズ(神経芽腫、横紋筋肉腫、骨腫瘍など)",
+      "reason": "教科書的レビューで新規データを伴わないため、今週は実データを含む3本を優先。"
+    }
+  ]
+}
