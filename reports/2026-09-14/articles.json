@@ -1,0 +1,88 @@
+{
+  "issue_date": "2026-09-14",
+  "show_name": "週刊・小児血液腫瘍ラジオ",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood OR adolescent OR \"young adult\") AND (leukemia OR leukaemia OR lymphoma OR neuroblastoma OR \"solid tumor\" OR \"solid tumour\" OR sarcoma OR \"brain tumor\" OR \"brain tumour\" OR \"hematologic malignancy\" OR \"haematologic malignancy\" OR \"bone marrow transplantation\" OR \"stem cell transplantation\" OR \"CAR-T\" OR \"hematology\" OR \"haematology\" OR anemia OR anaemia OR thrombocytopenia OR hemophilia OR haemophilia OR \"sickle cell\" OR thalassemia OR thalassaemia OR \"aplastic anemia\" OR \"aplastic anaemia\" OR neutropenia)",
+    "datetype": "edat",
+    "date_from": "2026-09-07",
+    "date_to": "2026-09-14",
+    "sort": "pub_date",
+    "max_results": 30,
+    "note": "設定欄(prompts/weekly_radio_prompt.md)のPubMedクエリは演算子数が検索ツールの上限を超えるため、全ての検索語を保持したまま(1)悪性疾患系(9語)・(2)造血器悪性腫瘍/移植関連(7語)・(3)非悪性血液疾患系(11語)の3クエリに分割して実行。各クエリのヒット数は141件/238件/102件(計481件)、上位30件ずつ計90件を取得し重複除去後75件のユニーク候補を得た。過去の号(2026-07-25〜2026-08-31)で選定済みのPMIDとの重複はなし。タイトル・抄録を screening し、症例報告・レター・番組テーマと関連の薄い他診療科の研究(例: 若年性特発性関節炎、喘息、慢性高血圧の妊娠合併症など)を除外したうえで、臨床的インパクト・新規性・エビデンスレベル・小児への直接的関連度・話題の多様性(非悪性血液疾患の新規治療/移植後合併症の集中治療/悪性リンパ腫の世界疾病負担)を考慮して3本を選定。",
+    "config_change_note": null
+  },
+  "selected": [
+    {
+      "pmid": "42731733",
+      "title": "FRONTIER5: Safety and patient experience of a direct switch from emicizumab to denecimig (Mim8) in patients with haemophilia A with or without inhibitors.",
+      "journal": "Journal of Thrombosis and Haemostasis (JTH)",
+      "date": "2026-09-12 (PubMed収載: 2026-09-07〜09-14)",
+      "type": "非ランダム化・単群・非盲検 第IIIb相試験（26週）",
+      "doi": "10.1016/j.jtha.2026.09.004",
+      "url": "https://doi.org/10.1016/j.jtha.2026.09.004",
+      "one_line": "既存の血友病A治療薬エミシズマブから、新規の第VIII因子模倣二重特異性抗体デネシマブ(Mim8)への直接切り替えの安全性と患者体験を検証した、12歳以上の血友病A患者61例（インヒビター保有・非保有を含む）を対象とする非盲検単群第IIIb相試験。",
+      "take_home": [
+        "ウォッシュアウト期間や負荷投与なしでエミシズマブからデネシマブへ直接切り替えても忍容性は良好で、血栓塞栓症・過敏反応・中和抗体の発現はゼロだった。有害事象は70.5%に発生したが大半が軽度〜中等度で治療とは無関係と判断された。",
+        "トロンビン生成能は投与1週目までに正常参照範囲に回復し、過剰な止血亢進反応は見られなかった。負荷投与を行わなくても16週までに定常状態の血中濃度に到達した。",
+        "参加者の98.3%がペン型注射デバイスを「使いやすい」「とても使いやすい」と評価し、切り替えの実務的ハードルは低いことが示唆された。ただし本試験は対照群を置かない非盲検単群試験であり、直接比較のエビデンスではない点に注意が必要。"
+      ]
+    },
+    {
+      "pmid": "42727884",
+      "title": "The Critical Therapeutic Window Lies Before Intubation: HFNC and Mortality Across Ventilatory Escalation Tiers in Pediatric HSCT.",
+      "journal": "Transplantation and Cellular Therapy",
+      "date": "2026-09-11 (PubMed収載: 2026-09-07〜09-14)",
+      "type": "後方視的コホート研究（単施設）",
+      "doi": "10.1016/j.jtct.2026.09.018",
+      "url": "https://doi.org/10.1016/j.jtct.2026.09.018",
+      "one_line": "21歳未満の小児同種造血幹細胞移植(alloHCT)後にPICU入室を要した患者を対象に、挿管前の高流量鼻カニュラ(HFNC)使用と、換気エスカレーションの各段階における死亡率の関係を検証した、2011〜2025年・単施設の後方視的コホート研究（移植530例中、非予定的PICU入室67例を解析）。",
+      "take_home": [
+        "挿管前にHFNCで呼吸管理された患者の半数(13/26例)は挿管そのものを回避でき、この群の死亡率はわずか23.1%だった。単変量解析ではHFNC使用は生存改善と関連していた(オッズ比0.21、95%CI 0.07-0.62)。",
+        "「HFNC使用が挿管後の転帰を悪化させるのでは」という懸念とは異なり、事前のHFNC使用の有無で挿管後死亡率に有意差はなかった(84.4% 対 76.9%)。ただしこの比較は検出力不足の可能性があると著者らは注記している。",
+        "死亡率が急上昇する転換点は侵襲的人工換気への移行そのもの(挿管後は80〜88%台に急上昇)であり、その後の高頻度振動換気やECMOへのさらなるエスカレーションでは死亡率が一段と跳ね上がるわけではなかった。著者らは「HFNCを使うか否か」ではなく「どの患者がHFNCに反応するか」を見極める前向き研究の必要性を強調している。"
+      ]
+    },
+    {
+      "pmid": "42731814",
+      "title": "Global burden and inequalities of Hodgkin and non-Hodgkin lymphoma among children aged 0-14 years, 1990-2021: a GBD 2021 analysis with forecasts to 2035.",
+      "journal": "Jornal de Pediatria (J Pediatr (Rio J))",
+      "date": "2026-09-12 (PubMed収載: 2026-09-07〜09-14)",
+      "type": "世界疾病負担(GBD)研究・疫学モデリング（ARIMA予測を含む）",
+      "doi": "10.1016/j.jped.2026.101617",
+      "url": "https://doi.org/10.1016/j.jped.2026.101617",
+      "one_line": "世界204の国と地域を対象に、0〜14歳の小児ホジキンリンパ腫(HL)・非ホジキンリンパ腫(NHL)の罹患率・死亡率・障害調整生存年(DALY)の1990〜2021年の推移と、2035年までの予測を分析したGBD(世界疾病負担研究)2021データに基づく疫学研究。",
+      "take_home": [
+        "1990年から2021年にかけて、小児HLの死亡率は10万人あたり0.152から0.095へ、NHLは0.75から0.45へと世界的に低下し、DALY率もそれぞれ12.50→7.78、63.38→37.83と大きく改善した。",
+        "男児や低SDI(社会人口統計学的指数)地域ほど疾病負担が重い傾向があり、NHL死亡率の絶対的不平等の指標(傾き指数)はやや改善した一方、相対的不平等の指標(集中度指数)はむしろ悪化していた(-0.38→-0.49)——恵まれない地域ほど改善のペースが遅れていることを示す。",
+        "2035年までの予測ではHL・NHLともに死亡率・DALY率のさらなる低下が見込まれるが、著者らは優先度指数の上位に挙がったパキスタン・ウガンダ・南スーダン・ジンバブエ・ナイジェリアなどへの診断・治療薬・支持療法・サーベイランス投資の必要性を強調している。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42721980",
+      "title": "Efficacy and safety of mitapivat in adults with transfusion-dependent α-thalassaemia or β-thalassaemia (ENERGIZE-T): a double-blind, randomised, multicentre, placebo-controlled, phase 3 trial.",
+      "reason": "Lancet掲載の第III相二重盲検プラセボ対照RCTで、輸血依存性サラセミアに対する初の経口疾患修飾薬という極めて高い臨床的インパクトを持つが、組み入れ対象が18歳以上(中央値33.5歳)の成人に限定されており、小児血液腫瘍という番組テーマとの直接的関連が薄いため見送り(過去号の成人限定AML試験と同様の判断基準)。次点候補。"
+    },
+    {
+      "pmid": "42720436",
+      "title": "Survival After Hematopoietic Stem Cell Transplantation in Diamond-Blackfan Anemia Syndrome: The Role of Iron Overload-A Systematic Review.",
+      "reason": "小児発症の希少疾患であるDiamond-Blackfan貧血症候群のHSCT後鉄過剰の影響を扱うシステマティックレビューだが、43研究・443例のメタ解析にもかかわらずバイアスリスクが高く「鉄過剰と死亡率の関連は結論づけられない」という非確定的な結果にとどまるため、より明確な結論を持つ3本を優先し見送り。"
+    },
+    {
+      "pmid": "42731729",
+      "title": "Impact of a Discharge-Focused Central Line Strategy on Reducing Line-Related Morbidity in Pediatric Allogeneic Hematopoietic Cell Transplantation (AlloHCT).",
+      "reason": "中心静脈ライン管理方針の変更により敗血症・再入院を有意に減らした実務的に価値の高い単施設後方視的研究(185例)だが、今週選んだHFNCの研究と同じ移植後支持療法領域でテーマが重複するため、話題の多様性を優先し見送り。次点候補。"
+    },
+    {
+      "pmid": "42730615",
+      "title": "Acute kidney injury during ruxolitinib therapy in pediatric patients with graft-versus-host disease: incidence, associated factors, and histopathological findings in a retrospective cohort study.",
+      "reason": "GVHD治療薬ルキソリチニブ投与中の急性腎障害の実態を示す興味深い後方視的研究だが、単施設38例と規模が小さく、対照群(非投与群)も置かれていないため、より規模の大きい3本を優先し見送り。"
+    }
+  ]
+}
