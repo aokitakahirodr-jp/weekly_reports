@@ -1,0 +1,88 @@
+{
+  "issue_date": "2026-09-21",
+  "show_name": "週刊・小児血液腫瘍ラジオ",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood OR adolescent OR \"young adult\") AND (leukemia OR leukaemia OR lymphoma OR neuroblastoma OR \"solid tumor\" OR \"solid tumour\" OR sarcoma OR \"brain tumor\" OR \"brain tumour\" OR \"hematologic malignancy\" OR \"haematologic malignancy\" OR \"bone marrow transplantation\" OR \"stem cell transplantation\" OR \"CAR-T\" OR \"hematology\" OR \"haematology\" OR anemia OR anaemia OR thrombocytopenia OR hemophilia OR haemophilia OR \"sickle cell\" OR thalassemia OR thalassaemia OR \"aplastic anemia\" OR \"aplastic anaemia\" OR neutropenia)",
+    "datetype": "edat",
+    "date_from": "2026-09-14",
+    "date_to": "2026-09-21",
+    "sort": "pub_date",
+    "max_results": 30,
+    "note": "設定欄のPubMedクエリは演算子数がツールの上限(20)を超えるため、全検索語を保持したまま(1)悪性疾患系(9語)・(2)造血器悪性腫瘍/移植関連(9語)の2クエリに分割して実行(計167件+241件=408件、上位30件ずつ取得)。ヒット数が非常に多かったため、手順書の指示に従いさらに出版タイプフィルタ(Review/RCT/Guideline)を付加した3分割クエリ(悪性固形腫瘍系9語・造血器悪性腫瘍/移植系9語・非悪性血液疾患系9語、それぞれ22件/38件/13件、計73件)を実行し、重複除去後53件のユニーク候補を得た。過去号(2026-07-25〜2026-09-14)で選定済みのPMIDとの重複はなし。タイトル・抄録をスクリーニングし、番組テーマと関連の薄い他領域の研究(例: 皮膚科の稀少リンパ増殖性疾患の症例報告、成人乳癌、多発性硬化症、精子形成とビタミンD、腸内細菌叢と貧血など)や、症例報告・エビデンスレベルの低いものを除外したうえで、臨床的インパクト・新規性・エビデンスレベル・小児への直接的関連度・話題の多様性(白血病の第III相RCT・神経芽腫免疫療法のエビデンスギャップ・HLH集中治療の精密医療)を考慮して3本を選定。",
+    "config_change_note": null
+  },
+  "selected": [
+    {
+      "pmid": "42748428",
+      "title": "Blinatumomab for Replacing Chemotherapy in Pediatric Acute Lymphoblastic Leukemia.",
+      "journal": "The New England Journal of Medicine (NEJM)",
+      "date": "2026-09-17 (PubMed収載: 2026-09-14〜09-21)",
+      "type": "多施設共同・非盲検・第III相ランダム化比較試験（AIEOP-BFM ALL 2017）",
+      "doi": "10.1056/NEJMoa2604166",
+      "url": "https://doi.org/10.1056/NEJMoa2604166",
+      "one_line": "新規診断の高リスクB細胞性急性リンパ性白血病(ALL)の小児709例を対象に、地固め療法後の化学療法2サイクルをCD19標的二重特異性T細胞誘導抗体ブリナツモマブ2サイクルに置き換える効果を検証した、AIEOP-BFM ALL 2017試験に基づく多施設・非盲検・第III相RCT。",
+      "take_home": [
+        "ブリナツモマブ群の4年時点イベントフリー生存率は83.0%で、化学療法群の70.3%を有意に上回った(ハザード比0.51、95%CI 0.35-0.73、p=0.0002)。",
+        "治療関連感染症はブリナツモマブ群23.9% vs 化学療法群69.4%と大幅に減少し、生命を脅かす有害事象も0.5% vs 4.7%と少なかった。一方、神経毒性はブリナツモマブ群でやや多く見られた(12.0% vs 3.2%)。",
+        "サイトカイン放出症候群はGrade2以上が1.1%のみで管理可能な範囲だった。今回の結果は中間解析であり、長期的な再発率や晩期合併症への影響は今後の追跡が必要。"
+      ]
+    },
+    {
+      "pmid": "42760926",
+      "title": "Comparative evidence on the independent contribution of granulocyte-macrophage colony-stimulating factor to anti-GD2 immunotherapy in neuroblastoma: a systematic review and gap analysis.",
+      "journal": "Frontiers in Oncology (Front Oncol)",
+      "date": "2026-09-04 (PubMed収載: 2026-09-14〜09-21)",
+      "type": "システマティックレビュー・エビデンスギャップ分析（PRISMA準拠、PROSPERO登録）",
+      "doi": "10.3389/fonc.2026.1932343",
+      "url": "https://doi.org/10.3389/fonc.2026.1932343",
+      "one_line": "神経芽腫に対する抗GD2抗体療法において、しばしば併用されるGM-CSF(顆粒球マクロファージコロニー刺激因子)が有効性・安全性に独立して寄与しているかを検証した、PRISMA準拠のシステマティックレビュー・エビデンスギャップ分析。",
+      "take_home": [
+        "GM-CSFの有無以外は同一の抗GD2レジメンを直接比較した研究は1件も見つからず、現在承認されている抗GD2抗体(dinutuximab、dinutuximab beta、naxitamab)についてはGM-CSFの寄与を検証した比較研究が皆無だった。",
+        "唯一関連した後方視的研究(Cheungら)は、GM-CSFが13-cis-レチノイン酸と同時投与されていた上、移植歴や導入療法など背景因子も治療時代間で異なっており、生存率の差をGM-CSFの効果だけに帰属することはできなかった。",
+        "現時点のエビデンスは、承認済みの抗GD2レジメンにおけるGM-CSF併用の要否を変更する根拠にはならない。抗GD2抗体のバックボーンを固定してGM-CSFの有無だけを比較するランダム化試験が必要と著者らは提言している。"
+      ]
+    },
+    {
+      "pmid": "42746142",
+      "title": "Precision immunomodulation for pediatric hemophagocytic lymphohistiocytosis in intensive care.",
+      "journal": "Pediatric Investigation (Pediatr Investig)",
+      "date": "2026-09-15 (PubMed収載: 2026-09-14〜09-21)",
+      "type": "総説（narrative review）",
+      "doi": "10.1002/ped4.70087",
+      "url": "https://doi.org/10.1002/ped4.70087",
+      "one_line": "小児の血球貪食性リンパ組織球症(HLH)およびサイトカインストーム症候群に対し、集中治療の現場で使える「精密免疫調整」の考え方を、病態表現型とバイオマーカーに基づいて整理した総説。",
+      "take_home": [
+        "インターフェロンγ経路の活性化はCXCL9、IL-1/IL-18経路はマクロファージ活性化症候群(MAS)でのアナキンラ適応、より広範なサイトカインシグナルは難治性HLHでのJAK阻害薬適応の手がかりになりうるが、あくまで治療選択の「参考」であり、確立された治療閾値ではない点に注意が必要。",
+        "IL-6を標的とした治療は、主にCAR-T細胞療法後などの免疫エフェクター細胞由来サイトカイン放出症候群において、症候群とグレードに応じて選択される。",
+        "標的療法は単独で完結せず、抗菌薬治療・感染源のコントロール・臓器サポート・感染サーベイランス、および必要に応じた早期の造血幹細胞移植計画と並行して行うべきで、24〜72時間ごとの再評価が推奨される。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42763207",
+      "title": "[Guidelines for the diagnosis and treatment of hemophagocytic lymphohistiocytosis (2026 edition)].",
+      "reason": "中国のHLH診療ガイドライン(2022年版の改訂・2026年版)で16の推奨を含む重要な更新だが、原文が中国語で英語では抄録レベルの情報しか得られず詳しい検証が難しいこと、3本目に選んだHLHの集中治療レビューと主題が重複することから見送り。次点候補。"
+    },
+    {
+      "pmid": "42749602",
+      "title": "[Management of venous thromboembolism in children with acute lymphoblastic leukemia: Recommendations from the harmonization workshops of the Leukemia Committee of the French Society for Childhood Cancer (SFCE)].",
+      "reason": "小児ALLにおける静脈血栓塞栓症の管理に関する実践的なフランスの専門家推奨(ルーチンの血栓性素因スクリーニングは非推奨、LMWHを第一選択とする等)で臨床的価値は高いが、1本目に選んだALL治療そのものの話題と主題が近いため、話題の多様性を優先し見送り。次点候補。"
+    },
+    {
+      "pmid": "42750436",
+      "title": "Endocrine dysfunction in transfusion-dependent and non-transfusion-dependent beta-thalassemia: a systematic review and meta-analysis.",
+      "reason": "輸血依存性・非依存性のβサラセミアにおける内分泌機能異常を比較したシステマティックレビューだが、組み入れが4研究427例と少なく異質性も高い(コルチゾール解析でI²=91.6%)上、小児限定データは1研究のみに留まるため、エビデンスの確実性が高い3本を優先し見送り。"
+    },
+    {
+      "pmid": "42753811",
+      "title": "B-Cell Lymphomas, Version 4.2026, NCCN Clinical Practice Guidelines In Oncology.",
+      "reason": "米国NCCNのB細胞リンパ腫診療ガイドライン改訂版で臨床的インパクトは大きいが、主に成人腫瘍領域を対象としており小児への直接的言及が限定的なため見送り。"
+    }
+  ]
+}
