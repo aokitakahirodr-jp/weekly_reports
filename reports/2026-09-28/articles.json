@@ -1,0 +1,88 @@
+{
+  "issue_date": "2026-09-28",
+  "show_name": "週刊・小児血液腫瘍ラジオ",
+  "format": {
+    "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "(pediatric OR paediatric OR children OR childhood OR adolescent OR \"young adult\") AND (leukemia OR leukaemia OR lymphoma OR neuroblastoma OR \"solid tumor\" OR \"solid tumour\" OR sarcoma OR \"brain tumor\" OR \"brain tumour\" OR \"hematologic malignancy\" OR \"haematologic malignancy\" OR \"bone marrow transplantation\" OR \"stem cell transplantation\" OR \"CAR-T\" OR \"hematology\" OR \"haematology\" OR anemia OR anaemia OR thrombocytopenia OR hemophilia OR haemophilia OR \"sickle cell\" OR thalassemia OR thalassaemia OR \"aplastic anemia\" OR \"aplastic anaemia\" OR neutropenia)",
+    "datetype": "edat",
+    "date_from": "2026-09-21",
+    "date_to": "2026-09-28",
+    "sort": "pub_date",
+    "max_results": 30,
+    "note": "設定欄のPubMedクエリは演算子数がツールの上限(20)を超えるため、全検索語を保持したまま(1)悪性固形腫瘍系9語・(2)造血器悪性腫瘍/移植系7語・(3)非悪性血液疾患系11語の3クエリに分割して実行(計128件+207件+108件=443件)。ヒット数が非常に多かったため、手順書の指示に従いさらに出版タイプフィルタ(Review/RCT/Guideline)を付加した同3分割クエリ(15件/33件/13件、計61件)を実行し、重複除去後55件のユニーク候補を得た。過去号(2026-07-25〜2026-09-21)で選定済みのPMIDとの重複はなし。タイトル・抄録をスクリーニングし、番組テーマと関連の薄いもの(基礎研究のみ、他領域中心、症例報告)を除外したうえで、臨床的インパクト・エビデンスレベル(学会診療ガイドライン・Cochraneオーバービュー・査読済み包括的レビュー)・小児血液腫瘍への直接的関連度・話題の多様性(急性白血病免疫療法ガイドライン・鎌状赤血球症の輸血エビデンス・小児脳腫瘍の分子分類)を考慮して3本を選定。",
+    "config_change_note": null
+  },
+  "selected": [
+    {
+      "pmid": "42767771",
+      "title": "Society for Immunotherapy of Cancer (SITC) clinical practice guideline on immunotherapy for the treatment of acute leukemia, version 2.0.",
+      "journal": "Journal for ImmunoTherapy of Cancer (J Immunother Cancer)",
+      "date": "2026-09-21 (PubMed収載: 2026-09-21〜09-28)",
+      "type": "学会診療ガイドライン（SITC専門家パネルによるエビデンス・コンセンサス基準の臨床実践ガイドライン改訂第2版）",
+      "doi": "10.1136/jitc-2026-015963",
+      "url": "https://doi.org/10.1136/jitc-2026-015963",
+      "one_line": "急性リンパ性白血病(ALL)・急性骨髄性白血病(AML)・芽球性形質細胞様樹状細胞腫瘍(BPDCN)に対する免疫療法(T細胞エンゲージャー、抗体薬物複合体、CAR-T細胞療法)について、Society for Immunotherapy of Cancer(SITC)の専門家パネルが診断から毒性管理、治療シーケンス、患者教育までを包括的に整理した臨床実践ガイドラインの改訂第2版。",
+      "take_home": [
+        "T細胞エンゲージャー(blinatumomabなど)、抗体薬物複合体、CAR-T細胞療法が、ALL・AML・BPDCNの治療における主要な柱として位置づけられ、同種造血幹細胞移植や分子標的薬と組み合わせた複雑な治療体系が整理された。",
+        "サイトカイン放出症候群や免疫エフェクター細胞関連神経毒性症候群(ICANS)などの毒性管理、どの順番でどの免疫療法を使うかという治療シーケンスについても、エビデンスとコンセンサスに基づく推奨が示された。",
+        "診断段階での適切な患者選択に加え、患者教育とQOL(生活の質)への配慮も、免疫療法時代の急性白血病診療に不可欠な要素として強調されている。"
+      ]
+    },
+    {
+      "pmid": "42781846",
+      "title": "Red blood cell transfusion to treat or prevent complications in sickle cell disease: an overview of Cochrane reviews.",
+      "journal": "The Cochrane Database of Systematic Reviews (Cochrane Database Syst Rev)",
+      "date": "2026-09-24 (PubMed収載: 2026-09-21〜09-28)",
+      "type": "コクラン・オーバービュー(コクランレビューのレビュー、AMSTAR品質評価・GRADE確実性評価付き、17件のコクランレビューを統合)",
+      "doi": "10.1002/14651858.CD012082.pub3",
+      "url": "https://doi.org/10.1002/14651858.CD012082.pub3",
+      "one_line": "鎌状赤血球症(SCD)の合併症を治療・予防するための赤血球(RBC)輸血について、17件のコクランレビューをAMSTAR基準で評価・統合し、エビデンスの確実性をGRADEで整理した、コクラン・オーバービュー。",
+      "take_home": [
+        "脳卒中高リスク(経頭蓋ドプラ異常や無症候性脳梗塞の既往)の小児・青年に対する長期赤血球輸血は、脳卒中リスクを有意に減少させる(相対リスク0.12、95%信頼区間0.03-0.49、中等度の確実性)。急性胸部症候群や疼痛発作のリスクも減少する可能性がある(低い確実性)。",
+        "統合された17件のコクランレビューのうち11件はそもそも輸血介入を含む試験自体が存在せず、報告されたアウトカムの多くは非常に低い確実性のエビデンスにとどまった。特に成人SCD患者における質の高いエビデンスはほとんど無い。",
+        "経頭蓋ドプラが正常化した小児で長期輸血を継続すると鉄過剰のリスクが上昇する可能性がある(低い確実性)。制限的輸血と寛容的(liberal)輸血の比較を含め、多くの比較で質の高いエビデンスが不足しており、著者らは今後さらに質の高いランダム化試験が必要と指摘している。"
+      ]
+    },
+    {
+      "pmid": "42773286",
+      "title": "Posterior fossa ependymoma: a comprehensive review of molecular classification, management guidelines, and clinical outcomes (Part I of ependymomas across compartments).",
+      "journal": "Journal of Neuro-Oncology (J Neurooncol)",
+      "date": "2026-09-22 (PubMed収載: 2026-09-21〜09-28)",
+      "type": "ナラティブレビュー(分子分類・画像所見・管理指針・臨床アウトカムを整理した包括的レビュー、コンパートメント別上衣腫レビューのPart I)",
+      "doi": "10.1007/s11060-026-05808-9",
+      "url": "https://doi.org/10.1007/s11060-026-05808-9",
+      "one_line": "小児に多い後頭蓋窩上衣腫(posterior fossa ependymoma)について、分子分類(PFA群/PFB群)・画像所見・治療アウトカムを整理した、コンパートメント別上衣腫レビューのPart I。",
+      "take_home": [
+        "後頭蓋窩上衣腫はPFA群とPFB群という分子的・臨床的に異なる2つのサブグループに分かれる。PFA群は幼い小児に多く進行が速い一方、H3K27me3の消失とEZHIPの過剰発現を特徴とし、1q増幅・6q欠失を伴うとさらに高リスクとなる。PFB群は年長患者に多くH3K27me3が保たれ、比較的予後良好。",
+        "MRIでは、PFA群のほうが腫瘍体積が大きく、水頭症・外側方への進展・頭蓋底浸潤・低い拡散係数(ADC値)を示しやすい傾向があり、術前の画像所見が分子亜型の推定に役立つ可能性がある。",
+        "治療の基本は安全な範囲での最大限の摘出(gross total resection)と局所放射線治療で、化学療法の役割は限定的。再発(特にPFA群)は早期発見・再摘出・選択的な再照射で対応し、1q増幅・6q欠失は再発時に多く見られる。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42797329",
+      "title": "From Therapeutic Drug Monitoring to Model-Informed Precision Dosing: A Review of Busulfan Dosing Optimization in Pediatric Hematopoietic Stem Cell Transplantation.",
+      "reason": "小児造血幹細胞移植におけるブスルファン投与量の精密化に関する実用的なレビューだが、1本目に選んだ急性白血病免疫療法ガイドライン(同種移植にも触れる)と主題が近いため、話題の多様性を優先し見送り。次点候補。"
+    },
+    {
+      "pmid": "42771074",
+      "title": "Global burden of moyamoya syndrome in pediatric sickle cell disease and implications for the neurosurgical workforce: a systematic review.",
+      "reason": "小児SCDにおけるもやもや症候群の世界的疾病負荷を扱ったシステマティックレビューで臨床的関心は高いが、2本目に選んだSCD輸血エビデンスのコクラン・オーバービューと主題(SCDの脳卒中関連合併症)が重複するため見送り。"
+    },
+    {
+      "pmid": "42782869",
+      "title": "Cellular and Immunotherapy for Pediatric Brain Tumors: A Primer.",
+      "reason": "小児脳腫瘍への細胞療法・免疫療法の入門的レビューだが、1本目(急性白血病免疫療法)と3本目(小児脳腫瘍)の両方とテーマが重なるため、独立したトピックとしての新規性を優先し見送り。"
+    },
+    {
+      "pmid": "42794162",
+      "title": "Osteonecrosis in Youth with Sickle Cell Disease-A Narrative Review.",
+      "reason": "SCDにおける骨壊死をまとめたナラティブレビューで臨床的に有用だが、2本目に選んだSCD輸血エビデンスと主題が重複するうえ、システマティックな確実性評価を伴わないため見送り。"
+    }
+  ]
+}
