@@ -1,0 +1,80 @@
+{
+ "issue_date": "2026-10-05",
+ "show_name": "週刊・小児血液腫瘍ラジオ",
+ "format": {
+  "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+  "topics": 3,
+  "take_home_per_topic": 3
+ },
+ "search": {
+  "datetype": "edat",
+  "date_from": "2026-09-28",
+  "date_to": "2026-10-05",
+  "sort": "pub_date",
+  "note": "設定欄のクエリは演算子数が上限(20)を超えるため、全検索語を保持して固形腫瘍系(3件)・白血病/リンパ腫/移植系(7件)・非悪性血液疾患系(10件)の3クエリに分割し、出版タイプ(Review/RCT/Guideline)で絞り込み、重複除去後18件を候補とした。"
+ },
+ "selected": [
+  {
+   "pmid": "42807925",
+   "title": "CAR-T Versus Non-CAR-T Bridging Strategies Before Allogeneic Hematopoietic Stem Cell Transplantation in Relapsed/Refractory B-Cell Acute Lymphoblastic Leukemia: A Systematic Review.",
+   "journal": "Cureus",
+   "date": "2026-10-02頃(PubMed収載: 2026-09-28〜10-05)",
+   "type": "システマティックレビュー(比較研究10報、ナラティブ統合)",
+   "doi": "10.7759/cureus.115393",
+   "one_line": "再発・難治B-ALLで同種移植前のつなぎ治療としてCAR-Tと非CAR-T治療を比べた10報を整理。深い寛解は得られるが、生存や安全性での一貫した優位性は示されなかった。",
+   "take_home": [
+    "CAR-Tによる移植前つなぎは深い寛解をもたらし得るが、MRD陰性化率で非CAR-Tに対する一貫した優位性は示されなかった。",
+    "一部の単施設研究で再発率低下やOS改善が報告された一方、全体としては生存・安全性の一貫した優位性は示されておらず、対象は全て中国の単施設研究である。",
+    "つなぎ治療の選択はMRD状態・疾患生物学・CAR-T構築・移植適格性で個別化し、前向き多施設比較試験が必要。"
+   ],
+   "url": "https://doi.org/10.7759/cureus.115393"
+  },
+  {
+   "pmid": "42819397",
+   "title": "The complications of irradiation or busulfan for CAYA before hematopoietic stem cell transplantation: a systematic review and meta-analysis.",
+   "journal": "Frontiers in Pediatrics",
+   "date": "2026-10頃(PubMed収載: 2026-09-28〜10-05)",
+   "type": "システマティックレビュー・メタ解析(26研究、0-25歳)",
+   "doi": "10.3389/fped.2026.1865647",
+   "one_line": "小児・AYA移植前処置として全身放射線照射(TBI)とブスルファン(Bu)を比較。ALLではTBIが無イベント生存・再発抑制に有利、AMLではBuに生存上の利点、晩期合併症はBu群で少なかった。",
+   "take_home": [
+    "ALLではTBIが無イベント生存と再発抑制で優れ、AMLや悪性・非悪性混合集団ではBuに生存上の利点が示された。",
+    "成長障害、甲状腺機能障害、性腺機能低下、二次がん、白内障はBu群で有意に少なかった。神経合併症と慢性GVHDには差がなかった。",
+    "前処置は疾患ごとに個別化し、TBIの長期毒性や女性でのBu関連の性腺リスクを踏まえ、早期の予防的介入と患者・家族への十分な説明が重要。"
+   ],
+   "url": "https://doi.org/10.3389/fped.2026.1865647"
+  },
+  {
+   "pmid": "42827181",
+   "title": "Continuous infusion of granulocyte colony-stimulating factor is associated with an advantage in neutrophil recovery in pediatric oncologic disorders.",
+   "journal": "Cancer Chemotherapy and Pharmacology",
+   "date": "2026-10-03",
+   "type": "ランダム化比較試験(単施設、解析対象20例の小規模試験)",
+   "doi": "10.1007/s00280-026-04966-x",
+   "one_line": "化学療法後好中球減少の小児で、G-CSFを点滴投与する群は静脈内注射群より好中球回復が約1.4日早く、発熱性好中球減少症も少なかった小規模RCT。",
+   "take_home": [
+    "好中球減少から回復までの平均期間は、点滴群6.2日、静注群7.6日(P=0.0068)で、約1.4日短縮した。",
+    "発熱性好中球減少症は点滴群15%、静注群50%(P=0.0407)。有害事象は両群で同程度だった。",
+    "登録28例・解析20例の単施設小規模試験であり、結果は仮説形成的。大規模・多施設での検証が必要。"
+   ],
+   "url": "https://doi.org/10.1007/s00280-026-04966-x"
+  }
+ ],
+ "not_selected_this_week": [
+  {
+   "pmid": "42824064",
+   "title": "Denecimig (Mim8) FRONTIER2 extension",
+   "reason": "対象が12歳以上の青年・成人の血友病Aで、小児中心の番組テーマとの関連がやや薄い（次点）"
+  },
+  {
+   "pmid": "42815789",
+   "title": "Exercise intervention for children with acute leukemia: best evidence summary",
+   "reason": "支持療法の要約で優先度を下げた"
+  },
+  {
+   "pmid": "42820064",
+   "title": "Neoadjuvant immunotherapy for osteosarcoma review",
+   "reason": "総説。今週は白血病・移植・支持療法に重点"
+  }
+ ]
+}
