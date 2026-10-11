@@ -1,0 +1,86 @@
+{
+ "issue_date": "2026-10-12",
+ "show_name": "週刊・小児血液腫瘍ラジオ",
+ "format": {
+  "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+  "topics": 3,
+  "take_home_per_topic": 3
+ },
+ "search": {
+  "datetype": "edat",
+  "date_from": "2026-10-05",
+  "date_to": "2026-10-12",
+  "sort": "pub_date",
+  "note": "設定欄のクエリは演算子数が上限(20)を超えるため、全検索語を保持して固形腫瘍系(7件)・白血病/リンパ腫/移植系(19件)・非悪性血液疾患系(77件中先頭30件)の3クエリに分割し、出版タイプ(Review/RCT/Guideline/Clinical Trial)で絞り込んだ。腫瘍系の重複除去後23件の抄録を確認して選定。"
+ },
+ "selected": [
+  {
+   "pmid": "42856915",
+   "title": "Efficacy and safety of immunotherapy in pediatric malignant brain tumors: a systematic review and exploratory meta-analysis.",
+   "journal": "Frontiers in Oncology",
+   "date": "2026-09-25(PubMed収載: 2026-10-05〜10-12)",
+   "type": "システマティックレビュー・探索的メタ解析(20研究)",
+   "doi": "10.3389/fonc.2026.1932372",
+   "one_line": "小児悪性脳腫瘍の免疫療法20研究を統合。非ワクチン療法はワクチン療法に比べOSを改善せず(HR 1.14)、CAR-Tや腫瘍溶解ウイルスでは重度神経毒性が顕著に多かった。",
+   "take_home": [
+    "非ワクチン免疫療法の全生存はワクチン療法と同等で、優位性は示されなかった(プールHR 1.14、95%CI 0.99-1.31)。",
+    "グレード3以上の神経毒性はワクチン研究では報告なし。CAR-T(OR 58)と腫瘍溶解ウイルス(OR 69)で特に多く、チェックポイント阻害薬等は有意な増加なし。",
+    "全生存の中央値は3.6〜17.8か月と幅が大きく、試験設計は異質。生存の不確かな利益と神経リスクを天秤にかけた今後の試験設計が必要。"
+   ],
+   "url": "https://doi.org/10.3389/fonc.2026.1932372"
+  },
+  {
+   "pmid": "42854102",
+   "title": "Menin inhibitors in acute leukemia: Advances and future directions.",
+   "journal": "Hematology/Oncology and Stem Cell Therapy",
+   "date": "2026-04号(PubMed収載: 2026-10-05〜10-12)",
+   "type": "レビュー(系統的検索あり、主に単群試験を評価)",
+   "doi": "10.4103/hemoncstem.hemoncstem-D-26-00007",
+   "one_line": "KMT2A再構成またはNPM1変異の急性白血病に対するメニン阻害薬(revumenib、ziftomenib)の現状を整理。再発・難治例でCR/CRh約20〜25%、1歳以上の小児での利用や前線治療への展開も議論。",
+   "take_home": [
+    "再発・難治のKMT2A再構成/NPM1変異白血病でCR/CRhは約20〜25%、寛解期間の中央値は約5〜6か月、反応例の過半でMRD陰性化。",
+    "分化症候群は約15%でステロイドにより多くは可逆。QTc延長(特にrevumenib)の心電図モニタリングが必要。耐性は再発例の約40%でMEN1変異による。",
+    "根拠の中心は単群試験・短期追跡でバイアスリスクが高く、生存利益や最適な使い方は進行中の第3相試験待ち。"
+   ],
+   "url": "https://doi.org/10.4103/hemoncstem.hemoncstem-D-26-00007"
+  },
+  {
+   "pmid": "42836898",
+   "title": "Personalized Therapy with Mercaptopurine in Acute Lymphoblastic Leukemia: Current Advances and Challenges.",
+   "journal": "Current Treatment Options in Oncology",
+   "date": "2026-10-06(PubMed収載: 2026-10-05〜10-12)",
+   "type": "レビュー",
+   "doi": "10.1007/s11864-026-01415-y",
+   "one_line": "ALL維持療法の要・メルカプトプリン(6-MP)について、代謝酵素の遺伝子多型、治療薬物モニタリング、TEAM療法、アロプリノール併用、耐性の課題を整理。",
+   "take_home": [
+    "6-MPは維持療法の基幹薬で、代謝酵素の遺伝子多型が忍容性や有害反応に影響し、個人差が大きい。",
+    "治療薬物モニタリング(TDM)への関心は高いが、コンセンサスは未確立。",
+    "TEAM療法やアロプリノール併用が有望な最適化戦略として挙げられ、獲得耐性の早期検出法の開発が課題。"
+   ],
+   "url": "https://doi.org/10.1007/s11864-026-01415-y"
+  }
+ ],
+ "not_selected_this_week": [
+  {
+   "pmid": "42853270",
+   "title": "Timing of radiotherapy and ASCT in ETMR: a critical narrative review",
+   "reason": "希少腫瘍のナラティブレビュー。脳腫瘍の話題は免疫療法SRに集約"
+  },
+  {
+   "pmid": "42851788",
+   "title": "CAR-T in solid malignancies: systematic review and meta-analysis",
+   "reason": "成人中心で小児血液腫瘍との関連が薄い"
+  },
+  {
+   "pmid": "42849401",
+   "title": "Supratentorial ependymoma: molecular classification and management",
+   "reason": "先週までに上衣腫レビューを紹介済みのため見送り"
+  },
+  {
+   "pmid": "42838072",
+   "title": "Thalassaemia reviews (Lancet Haematol)",
+   "reason": "非悪性疾患は次点。今週は白血病・脳腫瘍を優先"
+  }
+ ],
+ "ensure_ascii": false
+}
