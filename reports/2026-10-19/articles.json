@@ -1,0 +1,80 @@
+{
+ "issue_date": "2026-10-19",
+ "show_name": "週刊・小児血液腫瘍ラジオ",
+ "format": {
+  "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+  "topics": 3,
+  "take_home_per_topic": 3
+ },
+ "search": {
+  "datetype": "edat",
+  "date_from": "2026-10-12",
+  "date_to": "2026-10-19",
+  "sort": "pub_date",
+  "note": "設定欄のクエリは演算子数が上限を超えるため、固形腫瘍系(11件)・白血病/リンパ腫/移植系(20件)・非悪性血液疾患系(10件)の3クエリに分割し、出版タイプ(Review/RCT/Clinical Trial/Guideline/Meta-Analysis)で絞り込み。重複除去後約36件のうち腫瘍系・移植/感染系を中心に抄録を確認して選定。"
+ },
+ "selected": [
+  {
+   "pmid": "42875477",
+   "title": "Paediatric therapeutic development workshop on desmoplastic small round cell tumours.",
+   "journal": "British Journal of Cancer",
+   "date": "2026-10-14",
+   "type": "ワークショップ報告(レビュー)",
+   "doi": "10.1038/s41416-026-03631-7",
+   "one_line": "線維形成性小円形細胞腫瘍(DSRCT)の治療開発の優先標的(EWSR1::WT1、B7-H3、ADC等)と国際共同試験の必要性を整理したワークショップ報告。",
+   "take_home": [
+    "DSRCTの5年生存は20%未満で、標的治療がまだない高い未充足ニーズがある。",
+    "駆動因子EWSR1::WT1由来のネオ抗原を狙うTCR療法や、HER2・claudin-6を狙う抗体薬物複合体、NTRK3阻害薬が有望な候補として挙がった。",
+    "希少疾患のため、既存薬の評価と新規薬の開発を並行し、国際的に統一した試験とデータ収集が必要。"
+   ],
+   "url": "https://doi.org/10.1038/s41416-026-03631-7"
+  },
+  {
+   "pmid": "42887414",
+   "title": "Megakaryopoiesis and its dysregulation in paediatric acute megakaryoblastic leukaemia.",
+   "journal": "Leukemia Research",
+   "date": "2026-10-13",
+   "type": "レビュー",
+   "doi": "10.1016/j.leukres.2026.108343",
+   "one_line": "小児急性巨核芽球性白血病(AMKL)について、巨核球分化の異常と白血病幹細胞、BCL-XL依存性という治療標的を整理したレビュー。",
+   "take_home": [
+    "AMKLはAMLの稀なサブタイプで、他のAMLより予後が不良。",
+    "巨核球分化には従来の段階的経路に加え直接分化経路も提唱され、その破綻が白血病幹細胞の出現に関わる。",
+    "白血病幹細胞はベネトクラクス(BCL-2阻害薬)に抵抗性でも、BCL-XLへの依存を示すことがあり、治療標的として議論されている。"
+   ],
+   "url": "https://doi.org/10.1016/j.leukres.2026.108343"
+  },
+  {
+   "pmid": "42888378",
+   "title": "Isavuconazole: Real-World Data and Clinical Considerations for Pediatric Patients.",
+   "journal": "Paediatric Drugs",
+   "date": "2026-10-16",
+   "type": "レビュー(実臨床研究26件+登録試験2件)",
+   "doi": "10.1007/s40272-026-00780-3",
+   "one_line": "抗真菌薬イサブコナゾールの小児での実臨床データを整理。侵襲性真菌症の治療で約72%に奏効、予防投与のブレークスルー感染は約10%。",
+   "take_home": [
+    "侵襲性真菌症の治療では、評価可能例の約72%で完全または部分奏効が記述的に報告された。",
+    "予防投与でのブレークスルー真菌感染は約10%。有害事象は多くが可逆的な肝機能検査値異常で、重篤な肝障害は稀。",
+    "根拠は後ろ向きコホートや救済治療が中心で、前向き研究による有効性・用量・長期安全性の確認が必要。"
+   ],
+   "url": "https://doi.org/10.1007/s40272-026-00780-3"
+  }
+ ],
+ "not_selected_this_week": [
+  {
+   "pmid": "42874018",
+   "title": "Neurodevelopmental Blueprint in Gliomas (J Clin Oncol)",
+   "reason": "成人を含む神経上皮腫瘍の概念的枠組みで小児血液腫瘍との関連が薄い"
+  },
+  {
+   "pmid": "42887064",
+   "title": "cfDNA fragmentomics in hematologic malignancies",
+   "reason": "小児に特化せず、調査段階の内容"
+  },
+  {
+   "pmid": "42892561",
+   "title": "Pediatric Laryngeal Tumors: systematic review",
+   "reason": "領域外(耳鼻咽喉)"
+  }
+ ]
+}
