@@ -1,0 +1,77 @@
+{
+ "issue_date": "2026-10-26",
+ "show_name": "週刊・小児血液腫瘍ラジオ",
+ "format": {
+  "style": "2話者の対話形式（進行役ナオ × 解説役マキ先生）",
+  "topics": 3,
+  "take_home_per_topic": 3
+ },
+ "search": {
+  "datetype": "edat",
+  "date_from": "2026-10-19",
+  "date_to": "2026-10-26",
+  "sort": "pub_date",
+  "note": "設定欄のクエリは演算子数が上限(20)を超えるため、腫瘍/移植系と非悪性血液疾患系の2クエリに分割し、出版タイプ(Review/RCT/Clinical Trial/Guideline)で絞り込み。腫瘍/移植系21件・非悪性血液系13件(重複あり)。抄録を確認して選定。"
+ },
+ "selected": [
+  {
+   "pmid": "42897331",
+   "title": "Comparable efficacy of extraoral and intraoral photobiomodulation in preventing oral mucositis during high-dose methotrexate therapy in pediatric oncology: A single-blind randomized controlled trial.",
+   "journal": "Supportive Care in Cancer",
+   "date": "2026-10-19",
+   "type": "ランダム化比較試験",
+   "doi": "10.1007/s00520-026-11372-9",
+   "one_line": "大量メトトレキサート療法を受ける小児155例で、口腔外と口腔内のフォトバイオモジュレーションは口内炎予防で同等、口腔外は施行時間が短い。",
+   "take_home": [
+    "口内炎の発生は全体で35.5%、口腔内41.1%と口腔外30.5%に有意差はなかった(p=0.168)。",
+    "重症度・疼痛・プラーク指数も群間差なし。重症度に関連したのは年齢とメトトレキサート用量だった。",
+    "口腔外は1回約30秒と口腔内の約6分より短く、現場の負担軽減につながり得る。"
+   ]
+  },
+  {
+   "pmid": "42899381",
+   "title": "Hepatitis-Associated Aplastic Anemia in Children and Adolescents: A Comprehensive Review.",
+   "journal": "European Journal of Haematology",
+   "date": "2026-10-20",
+   "type": "レビュー",
+   "doi": "10.1111/ejh.70342",
+   "one_line": "急性肝炎の後に骨髄不全をきたす小児の肝炎関連再生不良性貧血(HAAA)の疫学・病態・診断・治療・予後を整理した総説。",
+   "take_home": [
+    "HAAAは急性肝炎の数週〜数か月後に骨髄不全を呈する稀で重篤な再生不良性貧血の亜型。",
+    "多くは血清学的に原因ウイルス不明で、T細胞を介した免疫機序が示唆されている。",
+    "治療は重症再生不良性貧血に準じて支持療法、ATG+シクロスポリン、造血幹細胞移植。再発・治療不応・クローン進化が課題で、前向き研究が必要。"
+   ]
+  },
+  {
+   "pmid": "42903281",
+   "title": "Resistance mechanisms and translational bottlenecks in CAR-T cell therapy for pediatric acute lymphoblastic leukemia: a perspective.",
+   "journal": "Frontiers in Immunology",
+   "date": "2026-10-06",
+   "type": "パースペクティブ(総説)",
+   "doi": "10.3389/fimmu.2026.1909384",
+   "one_line": "小児B-ALLのCAR-T療法で寛解後に再発する40〜50%の背景を、4層の耐性機構と臨床試験の現状から論じた論考。",
+   "take_home": [
+    "CAR-Tの寛解率は80%超だが、1年以内に40〜50%が再発する。",
+    "耐性は、CAR-Tの持続性低下、CD19抗原消失・系統転換、疲弊、免疫抑制的な骨髄微小環境の重なりで説明される。",
+    "小児対象CAR-T試験226件の95.6%が第I-II相で、結果未記録の試験も多く、試験設計と情報公開の改革が論点。"
+   ]
+  }
+ ],
+ "not_selected_this_week": [
+  {
+   "pmid": "42907068",
+   "title": "The Role of Therapeutic Drug Monitoring in the Treatment of Childhood Leukemia.",
+   "reason": "有用だが総論的で、今週は臨床試験・病態・耐性の3軸を優先"
+  },
+  {
+   "pmid": "42897095",
+   "title": "Transcriptome Analysis Identifies a Myeloid-Like Signature ... CD19 CAR-T",
+   "reason": "15例の探索研究で外部検証AUC約0.59と予測力が弱く、CAR-Tは総説で扱うため見送り"
+  },
+  {
+   "pmid": "42896926",
+   "title": "Gut microbiota dysbiosis in pediatric ALL",
+   "reason": "今週の枠では優先度を下げた"
+  }
+ ]
+}
