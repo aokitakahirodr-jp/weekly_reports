@@ -1,0 +1,80 @@
+{
+  "issue_date": "2026-11-02",
+  "format": {
+    "style": "2話者の対話形式（ナオ×マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "設定欄クエリを演算子上限(20)のため2分割して実行: (pediatric OR children OR childhood OR adolescent) AND (腫瘍系語…) / AND (血液疾患系語…)",
+    "datetype": "edat",
+    "date_from": "2026-10-26",
+    "date_to": "2026-11-02",
+    "new_hits_broad": 175,
+    "new_hits_hematology_query": 731
+  },
+  "selected": [
+    {
+      "pmid": "42960217",
+      "title": "Refining risk in historically high-risk pediatric B-cell acute lymphoblastic leukemia: response kinetics and outcomes.",
+      "journal": "Blood Neoplasia",
+      "date": "2026-09-19",
+      "type": "Journal Article (JCCG ALL-B12 post hoc)",
+      "doi": "10.1016/j.bneo.2026.100313",
+      "url": "https://doi.org/10.1016/j.bneo.2026.100313",
+      "one_line": "JCCG ALL-B12のpost hoc解析。KMT2A再構成型・低二倍体ALLを早期治療反応(PSL反応・MRD)で層別化できる可能性を示した。",
+      "take_home": [
+        "従来“高リスク”とされた亜型も、内部は均一ではなく異質である。",
+        "KMT2A再構成型ではPSL不良反応や持続MRDが、移植しても再発リスクと関連した。",
+        "低二倍体の一部は移植なしでも良好な成績で、早期反応が移植適応の見直しに役立つ可能性がある。"
+      ]
+    },
+    {
+      "pmid": "42944591",
+      "title": "Maintenance therapy with low dose cyclophosphamide does not increase the risk of second malignancies: The European Pediatric Soft Tissue Sarcoma Study Group RMS2005 study experience.",
+      "journal": "Cancer",
+      "date": "2026-11-01",
+      "type": "Journal Article (RMS2005 cohort)",
+      "doi": "10.1002/cncr.70661",
+      "url": "https://doi.org/10.1002/cncr.70661",
+      "one_line": "横紋筋肉腫1633例で、低用量シクロホスファミド維持療法は二次がんリスクの上昇と関連しなかった。",
+      "take_home": [
+        "二次悪性腫瘍は1.7%（27例）、8年累積発生率1.3%と低かった。",
+        "維持療法あり1.9%、なし1.6%で有意差なし（p=0.75）。",
+        "Li-Fraumeni症候群などの遺伝的素因と放射線歴が重要で、リスク適応型のサバイバーシップ診療が支持される。"
+      ]
+    },
+    {
+      "pmid": "42960221",
+      "title": "Travel time, insurance, and specialized cancer care for adolescents and young adults with acute lymphoblastic leukemia.",
+      "journal": "Blood Neoplasia",
+      "date": "2026-09-21",
+      "type": "Journal Article (registry study)",
+      "doi": "10.1016/j.bneo.2026.100314",
+      "url": "https://doi.org/10.1016/j.bneo.2026.100314",
+      "one_line": "米国3州のAYA-ALL 4211例で、専門がんセンターでの治療を妨げる要因として保険状況が一貫して関連した。",
+      "take_home": [
+        "専門がんセンターで治療を受けたAYA-ALLは54.5%で、州差が大きい（TXは27.3%）。",
+        "無保険は3州すべてで専門センター受診の低いオッズと関連した。",
+        "移動時間の影響はNYのみで、アクセス格差は地域・制度で異なる。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42949832",
+      "title": "Decitabine plus Bu-Cy conditioning for KMT2A-rearranged leukaemia (Lancet Haematol)",
+      "reason": "成人対象のRCTのため小児領域との関連が薄い"
+    },
+    {
+      "pmid": "42961318",
+      "title": "MHC-II deficiency Algerian cohort",
+      "reason": "免疫不全が主題で領域外"
+    },
+    {
+      "pmid": "42960899",
+      "title": "Dental abnormalities in pediatric leukemia: scoping review",
+      "reason": "臨床的インパクトが比較的小さい"
+    }
+  ]
+}
