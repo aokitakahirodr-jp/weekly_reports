@@ -1,0 +1,80 @@
+{
+  "issue_date": "2026-11-09",
+  "format": {
+    "style": "2話者の対話形式（ナオ×マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "設定欄クエリを腫瘍系・血液疾患系の2つに分割し、Review/RCT/Clinical Trial/Guideline で絞り込み",
+    "datetype": "edat",
+    "date_from": "2026-11-02",
+    "date_to": "2026-11-09",
+    "hits_oncology_filtered": 19,
+    "hits_hematology_filtered": 20
+  },
+  "selected": [
+    {
+      "pmid": "42985693",
+      "title": "Lineage switch in childhood leukemia.",
+      "journal": "HemaSphere",
+      "date": "2026-11-04",
+      "type": "Review (systematic literature review, 201 cases)",
+      "doi": "10.1002/hem3.70528",
+      "one_line": "1994〜2026年報告の小児系統転換201例を整理。70.1%がB-ALLからAMLへ、KMT2A再構成が47.8%。ブリナツモマブ後は転換までの期間が短い傾向。",
+      "take_home": [
+        "系統転換はまれだが予後不良で、小児ではKMT2A再構成型に多い。",
+        "報告例ではブリナツモマブ後に早く起こる傾向があるが、頻度の比較ではない。",
+        "免疫療法時代には、再発時の免疫表現型の再評価と早期発見の研究が重要。"
+      ],
+      "url": "https://doi.org/10.1002/hem3.70528"
+    },
+    {
+      "pmid": "42969749",
+      "title": "Pediatric Intensive Care Unit Mortality Among Hematopoietic Stem Cell Transplant Recipients: An Updated Systematic Review and Meta-Analysis.",
+      "journal": "Pediatric Blood & Cancer",
+      "date": "2026-11-02",
+      "type": "Systematic review / meta-analysis (35 studies, 4553 PICU admissions)",
+      "doi": "10.1002/1545-5017.70796",
+      "one_line": "小児HSCT後のPICU死亡率は37.35%（2008年報告の60%より低い）。人工呼吸・循環作動薬・腎代替療法が死亡と関連。",
+      "take_home": [
+        "小児HSCT後のPICU死亡率は約37%で、2008年の60%より低いが依然高い。",
+        "人工呼吸(OR 5.02)・循環作動薬(OR 5.75)・CRRT(OR 3.94)が死亡と関連。",
+        "低所得環境のデータが乏しく、大きなエビデンスギャップが残る。"
+      ],
+      "url": "https://doi.org/10.1002/1545-5017.70796"
+    },
+    {
+      "pmid": "42996725",
+      "title": "Risk-adapted radiotherapy in pediatric neuroblastoma: current evidence, controversies, and future directions-a narrative review.",
+      "journal": "Translational Pediatrics",
+      "date": "2026-10-15",
+      "type": "Narrative review",
+      "doi": "10.21037/tp-2026-0673",
+      "one_line": "高リスク神経芽腫の放射線治療の根拠を整理。原発巣照射は支持、転移巣は選択的に、予防的リンパ節照射は通常適応外。",
+      "take_home": [
+        "高リスク神経芽腫では原発巣への照射が根拠で支持されている(ANBL0532: 21.6 Gy)。",
+        "転移巣照射は選択的に。全部位の一律照射や予防的リンパ節照射は支持されない。",
+        "強化・減弱の対象を決めるには、照射体積・線量・長期成績のより良い報告が必要。"
+      ],
+      "url": "https://doi.org/10.21037/tp-2026-0673"
+    }
+  ],
+  "not_selected_this_week": [
+    {
+      "pmid": "42984243",
+      "title": "The 2025 KSPNO Guideline for the Diagnosis and Treatment of Medulloblastoma",
+      "reason": "抄録に具体的な推奨内容がなく、国内向けガイドラインの枠組み紹介が中心"
+    },
+    {
+      "pmid": "42982410",
+      "title": "Recent advances and future directions in targeting MYCN",
+      "reason": "基礎寄りで臨床的含意が間接的"
+    },
+    {
+      "pmid": "42996188",
+      "title": "Cancer in the Commonwealth: a Lancet Oncology Commission",
+      "reason": "小児血液腫瘍に特化しない"
+    }
+  ]
+}
