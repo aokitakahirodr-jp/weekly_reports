@@ -1,0 +1,71 @@
+{
+  "issue_date": "2026-11-16",
+  "format": {
+    "style": "2話者の対話形式（ナオ×マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "設定欄クエリはMCPの演算子上限(20)を超えるため、腫瘍系・血液疾患系の2つに分割し、Review/RCT/Clinical Trial/Meta-Analysis/Guideline で絞り込み",
+    "datetype": "edat",
+    "date_from": "2026-11-09",
+    "date_to": "2026-11-16",
+    "hits_oncology_filtered": 29,
+    "hits_hematology_filtered": 22,
+    "unique_candidates_reviewed": 44
+  },
+  "selected": [
+    {
+      "pmid": "43001147",
+      "title": "Steroid-Related Neuropsychiatric Symptoms (SRNS) in Children with Acute Lymphoblastic Leukemia (ALL): A Systematic Review of Clinical Features, Risk Factors, and Management.",
+      "journal": "Cancer Management and Research",
+      "date": "2026-11-04",
+      "type": "Systematic review (7 studies, 2,745 children)",
+      "doi": "10.2147/CMAR.S630677",
+      "url": "https://doi.org/10.2147/CMAR.S630677",
+      "one_line": "小児ALLのステロイド関連精神神経症状を整理。軽度の神経行動症状は最大40%、重症は約5%でデキサメタゾンに多く、寛解導入期と強化期に集中。",
+      "take_home": [
+        "軽い気分・行動の変化は最大4割、臨床的に問題となる症状は約5%と報告されている。",
+        "重症例はデキサメタゾンでプレドニゾンより多く、寛解導入期と強化期に集中する。",
+        "定義や評価法がばらばらで、標準的な管理法はまだ確立していない。"
+      ]
+    },
+    {
+      "pmid": "43020901",
+      "title": "Effect of two common GVHD prophylaxis regimens on the gut microbiome in a randomized phase 3 trial.",
+      "journal": "Nature Medicine",
+      "date": "2026-11-12",
+      "type": "Randomized phase 3 trial companion study (BMT CTN 1801 / 1703; 304 participants, 2,575 stool samples)",
+      "doi": "10.1038/s41591-026-04712-z",
+      "url": "https://doi.org/10.1038/s41591-026-04712-z",
+      "one_line": "PTCy/MMF と Tac/MTX の無作為化試験に付随した腸内細菌叢研究。生着時の多様性と非再発死亡の関連は認めず（主要評価項目未達）、移植前の多様性低値は全生存短縮と関連。",
+      "take_home": [
+        "生着時の腸内細菌叢の多様性と1年非再発死亡の関連は示されず、主要評価項目は未達。",
+        "移植前の多様性が低いことは全生存の短さと関連していた。",
+        "PTCy群では移植後早期に多様性と菌量が低く、予防法そのものが細菌叢に影響しうる。"
+      ]
+    },
+    {
+      "pmid": "43004102",
+      "title": "Clinical Outcomes, Implant Survival, and Complications of Expandable Endoprostheses for Lower Limb Reconstruction in Skeletally Immature Patients with Bone Sarcoma: A Systematic Review and Single-Cohort Meta-Analysis.",
+      "journal": "Annals of Surgical Oncology",
+      "date": "2026-11-09",
+      "type": "Systematic review / single-cohort meta-analysis (27 studies, 1,055 patients)",
+      "doi": "10.1245/s10434-026-20730-0",
+      "url": "https://doi.org/10.1245/s10434-026-20730-0",
+      "one_line": "成長期の下肢骨肉腫などに対する伸長型人工関節の統合解析。MSTSスコア82.9と機能は良好だが、合併症率は58%と高い。5年全生存76%。",
+      "take_home": [
+        "伸長型人工関節は機能面で良好（MSTSスコア約83）な患肢温存の選択肢となりうる。",
+        "合併症率は約58%と高く、低侵襲型と非侵襲型の伸長機構で有意差はなかった。",
+        "多くは後ろ向き研究で質は中等度。長期の追跡と再手術の説明が欠かせない。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {"pmid": "43004022", "title": "Advances in CBFA2T3::GLIS2 fusion gene in pediatric AML", "reason": "小児AMLの重要テーマだが抄録情報が少なく、今回は深掘りに十分な定量データがないため次回以降に保留。"},
+    {"pmid": "43026776", "title": "Exercise interventions with aerobic components in pediatric ALL: SR/MA", "reason": "同じ小児ALLの支持療法テーマ（SRNS）と重複するため。機能的移動能の改善は低確実性。"},
+    {"pmid": "43034611", "title": "EBMT recommendations: viral CNS infections after HSCT and CAR-T (part 1)", "reason": "重要なガイドラインだが成人・小児共通の網羅的推奨で、ラジオでの深掘りには不向き。part 2 (43032334) も同様。"},
+    {"pmid": "43011244", "title": "Inherited bone marrow failure syndromes in childhood", "reason": "総説として有用だが新規データに乏しい。同週に骨髄不全関連総説が多数（Indian J Hematol Blood Transfus 特集）あり、まとめて扱う方が適切。"},
+    {"pmid": "43025810", "title": "ASTCT position statement: when cord blood grafts may be preferred", "reason": "臨床的に重要だが成人中心の移植ドナー選択の立場表明のため次点。"}
+  ]
+}
