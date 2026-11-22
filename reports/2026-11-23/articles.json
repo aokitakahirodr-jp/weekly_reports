@@ -1,0 +1,77 @@
+{
+  "issue_date": "2026-11-23",
+  "show_name": "週刊・小児血液腫瘍ラジオ",
+  "format": {
+    "style": "2話者の対話形式（ナオ×マキ先生）",
+    "topics": 3,
+    "take_home_per_topic": 3
+  },
+  "search": {
+    "query": "設定欄クエリはMCPの演算子上限を超えるため、腫瘍系・血液疾患系の2つに分割し、Review/RCT/Clinical Trial/Guideline で絞り込み",
+    "datetype": "edat",
+    "date_from": "2026-11-16",
+    "date_to": "2026-11-23",
+    "hits_unfiltered_combined": 260,
+    "hits_oncology_filtered": 27,
+    "hits_hematology_filtered": 19,
+    "unique_candidates_reviewed": 45
+  },
+  "selected": [
+    {
+      "pmid": "43039028",
+      "title": "Daily iron supplementation for prevention or treatment of iron-deficiency anaemia in infants, children, and adolescents.",
+      "journal": "The Cochrane Database of Systematic Reviews",
+      "date": "2026-11-17",
+      "type": "Cochrane systematic review & meta-analysis (101 studies meta-analysed, 50,325 participants)",
+      "doi": "10.1002/14651858.CD013227.pub2",
+      "url": "https://doi.org/10.1002/14651858.CD013227.pub2",
+      "one_line": "0〜19歳への毎日の経口鉄補充は、鉄欠乏性貧血をおそらく大きく減らす（鉄単独 RR 0.24、中等度の確実性）一方、身長・体重の伸びや感染症などの罹病はほぼ変えない。",
+      "take_home": [
+        "鉄単独の毎日補充で鉄欠乏性貧血はおそらく約4分の1に減る（RR 0.24、中等度の確実性）。",
+        "身長・体重のzスコアや咳・発熱・呼吸器疾患には、ほぼ差がない（高い確実性）。",
+        "便の黒色化は増えうるが、嘔吐・下痢の差は小さい。貧血全体や鉄欠乏そのものへの効果は確実性が非常に低い。"
+      ]
+    },
+    {
+      "pmid": "43047409",
+      "title": "Clinical and molecular divergences in diffuse midline glioma, H3 K27-altered: A comparative study of survival outcomes in 1498 adults and children.",
+      "journal": "Neuro-Oncology Practice",
+      "date": "2026-12 (epub 2026-07-17)",
+      "type": "Systematic review with reconstructed individual patient data (82 studies, 1,498 patients)",
+      "doi": "10.1093/nop/npag069",
+      "url": "https://doi.org/10.1093/nop/npag069",
+      "one_line": "H3 K27変異型びまん性正中膠腫では、成人の全生存期間中央値が小児より長い（16.2 vs 11.4か月）が、その差は脳幹腫瘍に限られ、非脳幹部では同等だった。",
+      "take_home": [
+        "成人は小児より全生存期間（16.2 vs 11.4か月）・無増悪生存期間（9.17 vs 7.2か月）が長い。",
+        "ただし差は脳幹腫瘍に限られ、小児の約8割が脳幹発生という「部位」の違いが大きく影響している可能性。",
+        "成人はPPM1D・FGFR1・NF1、小児はACVR1変異が多い。分子情報は14〜37%の症例にしかなく、前向き研究が必要。"
+      ]
+    },
+    {
+      "pmid": "43054238",
+      "title": "Digital health interventions for medication adherence and adherence-related outcomes in pediatric oncology: a systematic review and meta-analysis.",
+      "journal": "Frontiers in Digital Health",
+      "date": "2026-11-04",
+      "type": "Systematic review & meta-analysis (9 reports; PROSPERO CRD420261510631)",
+      "doi": "10.3389/fdgth.2026.1966573",
+      "url": "https://doi.org/10.3389/fdgth.2026.1966573",
+      "one_line": "小児がんの服薬アドヒアランスを支えるアプリ等のデジタル介入を統合。介入後の客観的アドヒアランスは76%だったが、効果の証明ではなく、異質性が大きく慎重な解釈が必要。",
+      "take_home": [
+        "9報を統合し、介入後の客観的アドヒアランスは平均76%（95%CI 59–87%）。ただし対照のない記述的数値。",
+        "介入前後の変化は標準化平均差0.46と改善方向だが、3研究のみで測定法もばらばら。",
+        "デジタル介入は「支えになりうる」段階。自己効力感・知識なども含め、統一した指標での比較試験が待たれる。"
+      ]
+    }
+  ],
+  "not_selected_this_week": [
+    {"pmid": "43068242", "title": "Prognostic factors for pediatric postthrombotic syndrome (Kids-DOTT)", "reason": "興味深いが血栓症の二次解析で、今週は貧血・腫瘍・支持療法のバランスを優先。次回候補。"},
+    {"pmid": "43064296", "title": "Prevalence of von Willebrand disease among adolescents with heavy menstrual bleeding", "reason": "思春期の出血性疾患として重要。鉄欠乏トピックと重なりを避け次回候補。"},
+    {"pmid": "43052861", "title": "Iron polymaltose complex vs ferrous sulphate in pediatric IDA (meta-analysis)", "reason": "鉄剤トピックはCochraneレビューを優先し重複回避。"},
+    {"pmid": "43052165", "title": "Bispecific FVIIIa-mimetic antibodies in haemophilia A", "reason": "総説として有用だが新規データは限定的。"},
+    {"pmid": "43045452", "title": "Curative therapy for rhabdomyosarcoma", "reason": "ナラティブ総説で新規データなし。"},
+    {"pmid": "43038762", "title": "Gamma-delta T cells in neuroblastoma", "reason": "前臨床寄りの総説。"},
+    {"pmid": "43057549", "title": "Photobiomodulation for oral mucositis prevention in HSCT", "reason": "小児特異性が低いナラティブ統合。"},
+    {"pmid": "43036409", "title": "Precision medicine in ALL: narrative review", "reason": "ナラティブ総説で新規性が限定的。"}
+  ],
+  "disclaimer": "本番組・要約は教育目的の要点整理であり、医学的判断の根拠とはしないでください。必ず原著（PMID/DOI）をご確認ください。"
+}
